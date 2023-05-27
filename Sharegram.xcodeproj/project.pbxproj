@@ -11,8 +11,6 @@
 		C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */; };
 		C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */; };
 		C9AD69D02A21A0C100F727F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */; };
-		C9AD69D22A21A0C100F727F2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69D12A21A0C100F727F2 /* Persistence.swift */; };
-		C9AD69D52A21A0C100F727F2 /* Sharegram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69D32A21A0C100F727F2 /* Sharegram.xcdatamodeld */; };
 		C9AD69E02A21A0C100F727F2 /* SharegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69DF2A21A0C100F727F2 /* SharegramTests.swift */; };
 		C9AD69EA2A21A0C100F727F2 /* SharegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69E92A21A0C100F727F2 /* SharegramUITests.swift */; };
 		C9AD69EC2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69EB2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift */; };
@@ -41,9 +39,6 @@
 		C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C9AD69D12A21A0C100F727F2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		C9AD69D42A21A0C100F727F2 /* Sharegram.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sharegram.xcdatamodel; sourceTree = "<group>"; };
-		C9AD69D62A21A0C100F727F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AD69DB2A21A0C100F727F2 /* SharegramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharegramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69DF2A21A0C100F727F2 /* SharegramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramTests.swift; sourceTree = "<group>"; };
 		C9AD69E52A21A0C100F727F2 /* SharegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,12 +94,13 @@
 		C9AD69C72A21A0BF00F727F2 /* Sharegram */ = {
 			isa = PBXGroup;
 			children = (
-				C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */,
+				C9AD69FC2A21A33D00F727F2 /* Core */,
+				C9AD69FB2A21A33B00F727F2 /* Extensions */,
+				C9AD69FA2A21A33600F727F2 /* Model */,
+				C9AD69F92A21A33400F727F2 /* Services */,
+				C9AD69F82A21A33000F727F2 /* App */,
 				C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */,
 				C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */,
-				C9AD69D12A21A0C100F727F2 /* Persistence.swift */,
-				C9AD69D62A21A0C100F727F2 /* Info.plist */,
-				C9AD69D32A21A0C100F727F2 /* Sharegram.xcdatamodeld */,
 				C9AD69CE2A21A0C100F727F2 /* Preview Content */,
 			);
 			path = Sharegram;
@@ -133,6 +129,98 @@
 				C9AD69EB2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift */,
 			);
 			path = SharegramUITests;
+			sourceTree = "<group>";
+		};
+		C9AD69F82A21A33000F727F2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C9AD69F92A21A33400F727F2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C9AD69FA2A21A33600F727F2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9AD69FB2A21A33B00F727F2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C9AD69FC2A21A33D00F727F2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C9AD69FD2A21A37300F727F2 /* Authentication */,
+				C9AD69FE2A21A38100F727F2 /* Feed */,
+				C9AD69FF2A21A38900F727F2 /* Profile */,
+				C9AD6A002A21A38F00F727F2 /* Root */,
+				C9AD6A012A21A39A00F727F2 /* Search */,
+				C9AD6A022A21A3AD00F727F2 /* TabBar */,
+				C9AD6A032A21A3BA00F727F2 /* UploadPost */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C9AD69FD2A21A37300F727F2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		C9AD69FE2A21A38100F727F2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		C9AD69FF2A21A38900F727F2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		C9AD6A002A21A38F00F727F2 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C9AD6A012A21A39A00F727F2 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C9AD6A022A21A3AD00F727F2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		C9AD6A032A21A3BA00F727F2 /* UploadPost */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UploadPost;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +353,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AD69D52A21A0C100F727F2 /* Sharegram.xcdatamodeld in Sources */,
-				C9AD69D22A21A0C100F727F2 /* Persistence.swift in Sources */,
 				C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 			);
@@ -593,19 +679,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C9AD69D32A21A0C100F727F2 /* Sharegram.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C9AD69D42A21A0C100F727F2 /* Sharegram.xcdatamodel */,
-			);
-			currentVersion = C9AD69D42A21A0C100F727F2 /* Sharegram.xcdatamodel */;
-			path = Sharegram.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C9AD69BD2A21A0BF00F727F2 /* Project object */;
 }
