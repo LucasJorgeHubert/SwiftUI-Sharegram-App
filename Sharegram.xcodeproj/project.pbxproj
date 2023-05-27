@@ -14,6 +14,7 @@
 		C9AD69E02A21A0C100F727F2 /* SharegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69DF2A21A0C100F727F2 /* SharegramTests.swift */; };
 		C9AD69EA2A21A0C100F727F2 /* SharegramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69E92A21A0C100F727F2 /* SharegramUITests.swift */; };
 		C9AD69EC2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69EB2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift */; };
+		C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD6A042A21A44F00F727F2 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		C9AD69E52A21A0C100F727F2 /* SharegramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharegramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69E92A21A0C100F727F2 /* SharegramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramUITests.swift; sourceTree = "<group>"; };
 		C9AD69EB2A21A0C100F727F2 /* SharegramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9AD6A042A21A44F00F727F2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		C9AD6A022A21A3AD00F727F2 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C9AD6A042A21A44F00F727F2 /* MainTabView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
+				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
