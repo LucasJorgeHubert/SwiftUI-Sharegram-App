@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D202A22D23A00E94C49 /* FeedView.swift */; };
+		C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D222A22D24800E94C49 /* FeedCell.swift */; };
+		C93A3D252A22D8E200E94C49 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D242A22D8E200E94C49 /* FontExtension.swift */; };
+		C93A3D272A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
+		C93A3D282A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
+		C93A3D292A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */; };
 		C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */; };
 		C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */; };
@@ -37,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93A3D202A22D23A00E94C49 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		C93A3D222A22D24800E94C49 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		C93A3D242A22D8E200E94C49 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
+		C93A3D2A2A22D9C300E94C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C9AD69C52A21A0BF00F727F2 /* Sharegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramApp.swift; sourceTree = "<group>"; };
 		C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +111,7 @@
 		C9AD69C72A21A0BF00F727F2 /* Sharegram */ = {
 			isa = PBXGroup;
 			children = (
+				C93A3D2A2A22D9C300E94C49 /* Info.plist */,
 				C9AD69FC2A21A33D00F727F2 /* Core */,
 				C9AD69FB2A21A33B00F727F2 /* Extensions */,
 				C9AD69FA2A21A33600F727F2 /* Model */,
@@ -162,6 +174,8 @@
 		C9AD69FB2A21A33B00F727F2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */,
+				C93A3D242A22D8E200E94C49 /* FontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +205,8 @@
 		C9AD69FE2A21A38100F727F2 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				C93A3D202A22D23A00E94C49 /* FeedView.swift */,
+				C93A3D222A22D24800E94C49 /* FeedCell.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -346,6 +362,7 @@
 			files = (
 				C9AD69D02A21A0C100F727F2 /* Preview Assets.xcassets in Resources */,
 				C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */,
+				C93A3D272A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A3D282A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A3D292A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +389,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */,
 				C9AD6A072A21A84100F727F2 /* ProfileView.swift in Sources */,
+				C93A3D252A22D8E200E94C49 /* FontExtension.swift in Sources */,
 				C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
+				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -515,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -536,11 +558,13 @@
 				DEVELOPMENT_TEAM = 76WUJ9PUX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sharegram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -565,11 +589,13 @@
 				DEVELOPMENT_TEAM = 76WUJ9PUX7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sharegram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
