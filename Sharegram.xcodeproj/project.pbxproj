@@ -12,6 +12,7 @@
 		C93A3D272A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D282A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D292A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
+		C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940C16D2A2E27B6005A7A99 /* LoginView.swift */; };
 		C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */; };
 		C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */; };
 		C9AD69D02A21A0C100F727F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		C93A3D222A22D24800E94C49 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		C93A3D2A2A22D9C300E94C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C940C16D2A2E27B6005A7A99 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C9AD69C52A21A0BF00F727F2 /* Sharegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramApp.swift; sourceTree = "<group>"; };
 		C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 		C9AD69FD2A21A37300F727F2 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				C940C16D2A2E27B6005A7A99 /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
+				C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */,
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
