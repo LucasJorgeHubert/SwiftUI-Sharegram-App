@@ -10,7 +10,7 @@ import SwiftUI
 struct FeedCell: View {
     var body: some View {
         VStack {
-            // image + userename
+            // MARK: - User image and username
             HStack {
                 Image("userImage")
                     .resizable()
@@ -25,7 +25,7 @@ struct FeedCell: View {
             }
             .padding(.horizontal)
             
-            // Post Image
+            // MARK: - Post image
             
             Image("userImage")
                 .resizable()
@@ -33,7 +33,8 @@ struct FeedCell: View {
                 .frame(height: 400)
                 .clipShape(Rectangle())
             
-            // Action Buttons
+            // MARK: - Post action Buttons
+            /* Like | Comment | Share */
             
             HStack(spacing: 16) {
                 Button {
@@ -66,11 +67,15 @@ struct FeedCell: View {
             .padding()
             .foregroundColor(.purple)
             
+            // MARK: - Like counter
+            
             Text("20 Likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
+            
+            // MARK: - Comments
             
             HStack {
                 Text("Username ").fontWeight(.semibold) + Text("caption description")
@@ -79,6 +84,8 @@ struct FeedCell: View {
             .font(.footnote)
             .padding(.horizontal)
             .padding(.top, 1)
+            
+            // MARK: - Post time
             
             Text("6h ago")
                 .font(.footnote)

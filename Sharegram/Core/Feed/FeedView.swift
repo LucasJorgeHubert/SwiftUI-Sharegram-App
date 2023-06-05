@@ -9,15 +9,19 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
+        // MARK: - Navigation
         NavigationStack {
             ScrollView{
+                // MARK: - Build feed cell
                 LazyVStack(spacing: 32) {
                     ForEach(0 ... 10, id: \.self) { post in
+                        // MARK: - FeedCell Component
                         FeedCell()
                     }
                 }
                 .padding(.top, 8)
             }
+            // MARK: - NavigationSetup
             .navigationTitle("Wellcome")
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {

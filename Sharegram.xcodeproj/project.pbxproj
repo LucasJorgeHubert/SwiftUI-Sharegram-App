@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D202A22D23A00E94C49 /* FeedView.swift */; };
 		C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D222A22D24800E94C49 /* FeedCell.swift */; };
-		C93A3D252A22D8E200E94C49 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D242A22D8E200E94C49 /* FontExtension.swift */; };
 		C93A3D272A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D282A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D292A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */; };
-		C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */; };
 		C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */; };
 		C9AD69D02A21A0C100F727F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */; };
 		C9AD69E02A21A0C100F727F2 /* SharegramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69DF2A21A0C100F727F2 /* SharegramTests.swift */; };
@@ -46,12 +44,10 @@
 /* Begin PBXFileReference section */
 		C93A3D202A22D23A00E94C49 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		C93A3D222A22D24800E94C49 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
-		C93A3D242A22D8E200E94C49 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		C93A3D2A2A22D9C300E94C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C9AD69C52A21A0BF00F727F2 /* Sharegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramApp.swift; sourceTree = "<group>"; };
-		C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9AD69DB2A21A0C100F727F2 /* SharegramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharegramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +115,6 @@
 				C9AD69FA2A21A33600F727F2 /* Model */,
 				C9AD69F92A21A33400F727F2 /* Services */,
 				C9AD69F82A21A33000F727F2 /* App */,
-				C9AD69CA2A21A0BF00F727F2 /* ContentView.swift */,
 				C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */,
 				C9AD69CE2A21A0C100F727F2 /* Preview Content */,
 			);
@@ -177,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */,
-				C93A3D242A22D8E200E94C49 /* FontExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,8 +389,6 @@
 				C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */,
 				C9C99E7A2A28377500B3572C /* SearchView.swift in Sources */,
 				C9AD6A072A21A84100F727F2 /* ProfileView.swift in Sources */,
-				C93A3D252A22D8E200E94C49 /* FontExtension.swift in Sources */,
-				C9AD69CB2A21A0BF00F727F2 /* ContentView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,

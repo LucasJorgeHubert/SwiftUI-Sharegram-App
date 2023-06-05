@@ -15,13 +15,16 @@ struct SearchView: View {
             ScrollView {
                 LazyVStack(spacing:12) {
                     ForEach(0 ... 15, id: \.self) { user in
+                        // MARK: - User search cell
                         HStack {
+                            // MARK: - User image
                             Image("userImage")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 40, height: 40)
                             .clipShape(Circle())
                             
+                            // MARK: - Username and name
                             VStack(alignment: .leading) {
                                 Text("username")
                                     .fontWeight(.semibold)
@@ -32,6 +35,7 @@ struct SearchView: View {
                             
                             Spacer()
                             
+                            // MARK: - Remove from history
                             Button {
                                 
                             } label: {

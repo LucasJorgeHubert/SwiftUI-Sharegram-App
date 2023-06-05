@@ -17,9 +17,9 @@ struct ProfileView: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                // Header
+                // MARK: - Header
                 VStack(spacing: 10) {
-                    // Pic and stats
+                    // MARK: - User image
                     HStack {
                         Image("userImage")
                             .resizable()
@@ -29,6 +29,7 @@ struct ProfileView: View {
                         
                         Spacer()
                         
+                        // MARK: - Stats
                         HStack(spacing: 8) {
                             UserStatView(value: 3, title: "Posts")
                             UserStatView(value: 3, title: "Followers")
@@ -38,7 +39,7 @@ struct ProfileView: View {
                     .padding(.horizontal)
                     .padding(.bottom, 4)
                     
-                    // Name and bio
+                    // MARK: - Username and Name
                     VStack(alignment: .leading) {
                         Text("lkshubert")
                             .font(.footnote)
@@ -51,8 +52,7 @@ struct ProfileView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     
-                    // actionButton
-                    
+                    // MARK: - Button actions
                     Button {
                         
                     } label: {
@@ -74,7 +74,7 @@ struct ProfileView: View {
                 }
                 .padding(.top, 8)
                 
-                // postGrid
+                // MARK: - Post Grid
                 
                 LazyVGrid(columns: gridItems, spacing: 1) {
                     ForEach(0 ... 15, id: \.self) { index in
