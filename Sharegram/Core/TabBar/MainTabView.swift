@@ -10,22 +10,27 @@ import SwiftUI
 struct MainTabView: View {
     var body: some View {
         TabView {
+            // MARK: - Feed View
             FeedView()
                 .tabItem {
                     Image(systemName: "house")
                 }
+            // MARK: - Search View
             SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
+            // MARK: - Upload Post
             Text("UploadPost")
                 .tabItem {
                     Image(systemName: "plus.square")
                 }
+            // MARK: - Notification
             Text("Notifications")
                 .tabItem {
                     Image(systemName: "heart")
                 }
+            // MARK: - Profile View
             ProfileView()
                 .tabItem {
                     Image(systemName: "person")

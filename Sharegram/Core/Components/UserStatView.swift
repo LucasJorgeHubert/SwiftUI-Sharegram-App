@@ -13,10 +13,11 @@ struct UserStatView: View {
     
     var body: some View {
         VStack{
+            // MARK: - Stats value
             Text("\(value)")
                 .font(.subheadline)
                 .fontWeight(.semibold)
-            
+            // MARK: - Stats description
             Text(title)
                 .font(.footnote)
         }
