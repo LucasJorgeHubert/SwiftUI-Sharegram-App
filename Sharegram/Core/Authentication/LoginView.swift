@@ -28,18 +28,10 @@ struct LoginView: View {
                 VStack {
                     TextField("Username", text: $username)
                         .autocapitalization(.none)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemIndigo).opacity(0.1))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(SGTextFieldModifier())
                     
                     SecureField("Password", text: $password)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemIndigo).opacity(0.1))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(SGTextFieldModifier())
                 }
                 
                 // MARK: - Action Buttons
@@ -73,7 +65,7 @@ struct LoginView: View {
                 Divider()
                 
                 NavigationLink {
-                    Text("SignUp")
+                    AddEmailView()
                 } label: {
                     HStack {
                         Text("Don't have an account?")
