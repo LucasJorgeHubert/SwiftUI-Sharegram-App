@@ -12,6 +12,12 @@
 		C93A3D272A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D282A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
 		C93A3D292A22D99F00E94C49 /* GreatVibes-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */; };
+		C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940C16D2A2E27B6005A7A99 /* LoginView.swift */; };
+		C940C1702A2E2CFD005A7A99 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940C16F2A2E2CFD005A7A99 /* AddEmailView.swift */; };
+		C940C1722A2E3099005A7A99 /* SGTextInputModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C940C1712A2E3099005A7A99 /* SGTextInputModifier.swift */; };
+		C9AD08E12A6F06C40045932C /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD08E02A6F06C40045932C /* CreateUsernameView.swift */; };
+		C9AD08E52A6F08C50045932C /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD08E42A6F08C50045932C /* CreatePasswordView.swift */; };
+		C9AD08E72A6F0ADD0045932C /* CompleteSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD08E62A6F0ADD0045932C /* CompleteSignUp.swift */; };
 		C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */; };
 		C9AD69CD2A21A0C100F727F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */; };
 		C9AD69D02A21A0C100F727F2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AD69CF2A21A0C100F727F2 /* Preview Assets.xcassets */; };
@@ -46,6 +52,12 @@
 		C93A3D222A22D24800E94C49 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GreatVibes-Regular.ttf"; sourceTree = "<group>"; };
 		C93A3D2A2A22D9C300E94C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C940C16D2A2E27B6005A7A99 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		C940C16F2A2E2CFD005A7A99 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		C940C1712A2E3099005A7A99 /* SGTextInputModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGTextInputModifier.swift; sourceTree = "<group>"; };
+		C9AD08E02A6F06C40045932C /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
+		C9AD08E42A6F08C50045932C /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		C9AD08E62A6F0ADD0045932C /* CompleteSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUp.swift; sourceTree = "<group>"; };
 		C9AD69C52A21A0BF00F727F2 /* Sharegram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sharegram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AD69C82A21A0BF00F727F2 /* SharegramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharegramApp.swift; sourceTree = "<group>"; };
 		C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +206,11 @@
 		C9AD69FD2A21A37300F727F2 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				C940C16D2A2E27B6005A7A99 /* LoginView.swift */,
+				C940C16F2A2E2CFD005A7A99 /* AddEmailView.swift */,
+				C9AD08E02A6F06C40045932C /* CreateUsernameView.swift */,
+				C9AD08E42A6F08C50045932C /* CreatePasswordView.swift */,
+				C9AD08E62A6F0ADD0045932C /* CompleteSignUp.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -249,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				C9AD6A092A21AD2200F727F2 /* UserStatView.swift */,
+				C940C1712A2E3099005A7A99 /* SGTextInputModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -386,12 +404,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AD08E12A6F06C40045932C /* CreateUsernameView.swift in Sources */,
 				C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */,
+				C9AD08E72A6F0ADD0045932C /* CompleteSignUp.swift in Sources */,
 				C9C99E7A2A28377500B3572C /* SearchView.swift in Sources */,
 				C9AD6A072A21A84100F727F2 /* ProfileView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
+				C940C1722A2E3099005A7A99 /* SGTextInputModifier.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
+				C940C1702A2E2CFD005A7A99 /* AddEmailView.swift in Sources */,
+				C9AD08E52A6F08C50045932C /* CreatePasswordView.swift in Sources */,
+				C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */,
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
