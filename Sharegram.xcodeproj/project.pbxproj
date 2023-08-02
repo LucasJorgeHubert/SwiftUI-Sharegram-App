@@ -34,6 +34,7 @@
 		C9D973142A7A06E50013EB4A /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973132A7A06E50013EB4A /* PostGridView.swift */; };
 		C9D973162A7A08FF0013EB4A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973152A7A08FF0013EB4A /* ProfileHeaderView.swift */; };
 		C9D973182A7A0BF90013EB4A /* UploadPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973172A7A0BF90013EB4A /* UploadPostView.swift */; };
+		C9D9731A2A7A0F160013EB4A /* UploadPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973192A7A0F160013EB4A /* UploadPostViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		C9D973132A7A06E50013EB4A /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		C9D973152A7A08FF0013EB4A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		C9D973172A7A0BF90013EB4A /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
+		C9D973192A7A0F160013EB4A /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				C9D973172A7A0BF90013EB4A /* UploadPostView.swift */,
+				C9D973192A7A0F160013EB4A /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */,
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 				C9D973142A7A06E50013EB4A /* PostGridView.swift in Sources */,
+				C9D9731A2A7A0F160013EB4A /* UploadPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
