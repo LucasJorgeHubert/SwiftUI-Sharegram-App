@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */; };
+		C902D1792A7AE4BB00BFA324 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1782A7AE4BB00BFA324 /* LoginViewModel.swift */; };
 		C9060F832A6F6ACC00EF70F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9060F822A6F6ACC00EF70F8 /* User.swift */; };
 		C9060F852A6F74A400EF70F8 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9060F842A6F74A300EF70F8 /* CurrentUserProfileView.swift */; };
 		C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D202A22D23A00E94C49 /* FeedView.swift */; };
@@ -65,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		C902D1782A7AE4BB00BFA324 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C9060F822A6F6ACC00EF70F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9060F842A6F74A300EF70F8 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		C93A3D202A22D23A00E94C49 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */,
+				C902D1782A7AE4BB00BFA324 /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				C9D973182A7A0BF90013EB4A /* UploadPostView.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C9D9732F2A7AB2480013EB4A /* ContentViewModel.swift in Sources */,
+				C902D1792A7AE4BB00BFA324 /* LoginViewModel.swift in Sources */,
 				C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */,
 				C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
