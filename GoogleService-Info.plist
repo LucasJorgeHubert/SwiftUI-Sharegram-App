@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>939191095149-3mt2sptglg3r6fm99p7a8bsr9sruon36.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.939191095149-3mt2sptglg3r6fm99p7a8bsr9sruon36</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC2jybEdWOG0PnwfhLynQAtdB4bzOwi7QQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>939191095149</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>samples.projects.swiftUI.Sharegram</string>
+	<key>PROJECT_ID</key>
+	<string>sharegram-swiftui</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sharegram-swiftui.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:939191095149:ios:8dcc7fe33b4906d2375464</string>
+</dict>
+</plist>
