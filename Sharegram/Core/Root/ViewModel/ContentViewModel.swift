@@ -16,7 +16,7 @@ class contentViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     
     init() {
-        
+        setupSubscribers()
     }
     
     func setupSubscribers() {
