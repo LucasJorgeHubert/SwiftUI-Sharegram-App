@@ -16,6 +16,12 @@ struct ProfileView: View {
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1)
     ]
+    private let imageDimension: CGFloat = (UIScreen.main.bounds.width / 3) - 1
+    
+    var posts: [Post] {
+        return Post.MOCK_POSTS.filter { $0.user?.username == user.username }
+    }
+    
     var body: some View {
         ScrollView {
             // MARK: - Header
@@ -82,14 +88,16 @@ struct ProfileView: View {
             // MARK: - Post Grid
             
             LazyVGrid(columns: gridItems, spacing: 1) {
-                ForEach(0 ... 15, id: \.self) { index in
-                    Image("userImage")
+                ForEach(posts) { post in
+                    Image(post.imageURL)
                         .resizable()
-                        .scaledToFill()
+                        .scaledToFit()
+                        .frame(width: imageDimension, height: imageDimension)
+                        .clipped()
                 }
             }
         }
-        .navigationTitle("Profile")
+        .navigationTitle(user.username)
         .navigationBarTitleDisplayMode(.automatic)
     }
 }
