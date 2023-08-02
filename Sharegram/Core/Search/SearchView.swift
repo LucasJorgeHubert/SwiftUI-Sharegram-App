@@ -11,46 +11,41 @@ struct SearchView: View {
     @State var searchText = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 LazyVStack(spacing:12) {
-                    ForEach(0 ... 15, id: \.self) { user in
-                        // MARK: - User search cell
-                        HStack {
-                            // MARK: - User image
-                            Image("userImage")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 40, height: 40)
-                            .clipShape(Circle())
-                            
-                            // MARK: - Username and name
-                            VStack(alignment: .leading) {
-                                Text("username")
-                                    .fontWeight(.semibold)
+                    ForEach(User.MOCK_USERS) { user in
+                        NavigationLink(value: user) {
+                            // MARK: - User search cell
+                            HStack {
+                                // MARK: - User image
+                                Image(user.profileImageURL ?? "")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
                                 
-                                Text("User Name")
-                            }
-                            .font(.footnote)
-                            
-                            Spacer()
-                            
-                            // MARK: - Remove from history
-                            Button {
+                                // MARK: - Username and name
+                                VStack(alignment: .leading) {
+                                    Text(user.username)
+                                        .fontWeight(.bold)
+                                    
+                                    Text(user.fullname ?? "")
+                                }
+                                .foregroundColor(.black)
+                                .font(.footnote)
                                 
-                            } label: {
-                                Image(systemName: "xmark")
-                                    .foregroundColor(.black)
-                                    .opacity(0.6)
-                                    .imageScale(.small)
+                                Spacer()
                             }
-
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                 }
                 .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search...")
             }
+            .navigationDestination(for: User.self, destination: { user in
+                ProfileView(user: user)
+            })
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.automatic)
         }
