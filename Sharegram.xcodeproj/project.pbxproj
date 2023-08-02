@@ -292,6 +292,8 @@
 		C9AD6A032A21A3BA00F727F2 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
+				C9D973172A7A0BF90013EB4A /* UploadPostView.swift */,
+				C9D973192A7A0F160013EB4A /* UploadPostViewModel.swift */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -495,6 +497,7 @@
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 				C9060F832A6F6ACC00EF70F8 /* User.swift in Sources */,
 				C940C1722A2E3099005A7A99 /* SGTextInputModifier.swift in Sources */,
+				C9D973182A7A0BF90013EB4A /* UploadPostView.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C9D9732F2A7AB2480013EB4A /* ContentViewModel.swift in Sources */,
 				C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */,
@@ -506,6 +509,7 @@
 				C940C16E2A2E27B6005A7A99 /* LoginView.swift in Sources */,
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 				C9D973142A7A06E50013EB4A /* PostGridView.swift in Sources */,
+				C9D9731A2A7A0F160013EB4A /* UploadPostViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
