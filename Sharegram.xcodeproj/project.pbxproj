@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */; };
 		C9060F832A6F6ACC00EF70F8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9060F822A6F6ACC00EF70F8 /* User.swift */; };
 		C9060F852A6F74A400EF70F8 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9060F842A6F74A300EF70F8 /* CurrentUserProfileView.swift */; };
 		C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D202A22D23A00E94C49 /* FeedView.swift */; };
@@ -40,7 +41,7 @@
 		C9D973212A7AAE240013EB4A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C9D973202A7AAE240013EB4A /* FirebaseFirestore */; };
 		C9D973232A7AAE240013EB4A /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C9D973222A7AAE240013EB4A /* FirebaseFirestoreSwift */; };
 		C9D973252A7AAE240013EB4A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C9D973242A7AAE240013EB4A /* FirebaseStorage */; };
-		C9D973292A7AB0210013EB4A /* AuthFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973282A7AB0210013EB4A /* AuthFile.swift */; };
+		C9D973292A7AB0210013EB4A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973282A7AB0210013EB4A /* AuthService.swift */; };
 		C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D9732B2A7AB1F10013EB4A /* ContentView.swift */; };
 		C9D9732F2A7AB2480013EB4A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D9732E2A7AB2480013EB4A /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C9060F822A6F6ACC00EF70F8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C9060F842A6F74A300EF70F8 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		C93A3D202A22D23A00E94C49 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -94,7 +96,7 @@
 		C9D973172A7A0BF90013EB4A /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		C9D973192A7A0F160013EB4A /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		C9D9731B2A7AAD2B0013EB4A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		C9D973282A7AB0210013EB4A /* AuthFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFile.swift; sourceTree = "<group>"; };
+		C9D973282A7AB0210013EB4A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C9D9732B2A7AB1F10013EB4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9D9732E2A7AB2480013EB4A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C902D1752A7AD9FE00BFA324 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C9AD69BC2A21A0BF00F727F2 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		C9AD69FD2A21A37300F727F2 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				C902D1752A7AD9FE00BFA324 /* ViewModel */,
 				C9D973272A7AB0050013EB4A /* Service */,
 				C9D973262A7AAFF10013EB4A /* View */,
 			);
@@ -323,7 +334,7 @@
 		C9D973272A7AB0050013EB4A /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C9D973282A7AB0210013EB4A /* AuthFile.swift */,
+				C9D973282A7AB0210013EB4A /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -488,7 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AD08E12A6F06C40045932C /* CreateUsernameView.swift in Sources */,
-				C9D973292A7AB0210013EB4A /* AuthFile.swift in Sources */,
+				C9D973292A7AB0210013EB4A /* AuthService.swift in Sources */,
 				C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */,
 				C9060F852A6F74A400EF70F8 /* CurrentUserProfileView.swift in Sources */,
 				C9AD08E72A6F0ADD0045932C /* CompleteSignUp.swift in Sources */,
@@ -500,6 +511,7 @@
 				C9D973182A7A0BF90013EB4A /* UploadPostView.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
 				C9D9732F2A7AB2480013EB4A /* ContentViewModel.swift in Sources */,
+				C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */,
 				C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
 				C9D973122A79FEBF0013EB4A /* Post.swift in Sources */,

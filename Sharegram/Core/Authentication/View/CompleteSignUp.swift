@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CompleteSignUp: View {
-    
+    @EnvironmentObject var viewModel: RegistrationViewModel
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(spacing: 12) {
             Spacer()
-            Text("Wellcome to Sharegram")
+            Text("Wellcome to Sharegram, \(viewModel.username)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
@@ -26,7 +26,7 @@ struct CompleteSignUp: View {
                 .padding(.horizontal, 24)
             
             Button {
-                print("Complete Sign Up")
+                Task { try await viewModel.createUser() }
             } label: {
                 Text("Complete Sign Up")
                     .font(.subheadline)
