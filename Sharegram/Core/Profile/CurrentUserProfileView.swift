@@ -25,7 +25,7 @@ struct CurrentUserProfileView: View {
                 
                 PostGridView(posts: posts)
             }
-            .navigationTitle("Profile")
+            .navigationTitle(user.username)
             .navigationBarTitleDisplayMode(.automatic)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
