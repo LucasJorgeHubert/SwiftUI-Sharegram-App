@@ -21,7 +21,7 @@ struct EditProfileView: View {
         VStack{
             HStack {
                 Button {
-                    print("Upload post")
+                    dismiss()
                 } label: {
                     Text("Cancel")
                 }
@@ -34,7 +34,10 @@ struct EditProfileView: View {
                 Spacer()
                 
                 Button {
-                    Task { try await viewModel.updateUserData() }
+                    Task {
+                        try await viewModel.updateUserData()
+                        dismiss()
+                    }
                 } label: {
                     Text("Done")
                         .fontWeight(.semibold)
@@ -46,21 +49,7 @@ struct EditProfileView: View {
             
             PhotosPicker(selection: $viewModel.selectedImage) {
                 VStack {
-                    if let image = viewModel.profileImage {
-                        image
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.white)
-                            .background(.gray)
-                            .clipShape(Circle())
-                    } else {
-                        Image(systemName: "person")
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.white)
-                            .background(.gray)
-                            .clipShape(Circle())
-                    }
+                    CircularProfileImageView(user: viewModel.user, size: .medium)
                         
                     Text("Edit profile picture")
                         .font(.footnote)

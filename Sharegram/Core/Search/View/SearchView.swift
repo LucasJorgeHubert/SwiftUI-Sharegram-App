@@ -20,11 +20,7 @@ struct SearchView: View {
                             // MARK: - User search cell
                             HStack {
                                 // MARK: - User image
-                                Image(user.profileImageURL ?? "")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 40, height: 40)
-                                    .clipShape(Circle())
+                                CircularProfileImageView(user: user, size: .small)
                                 
                                 // MARK: - Username and name
                                 VStack(alignment: .leading) {
