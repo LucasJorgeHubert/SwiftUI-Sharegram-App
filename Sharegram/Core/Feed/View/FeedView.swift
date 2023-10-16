@@ -33,8 +33,13 @@ struct FeedView: View {
                         .frame(width: 110, height: 32)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Image(systemName: "paperplane")
-                        .imageScale(.large)
+                    Button {
+                        //
+                    } label: {
+                        Image(systemName: "paperplane.circle.fill")
+                            .imageScale(.large)
+                            .foregroundColor(.purple)
+                    }
                 }
             }
         }
