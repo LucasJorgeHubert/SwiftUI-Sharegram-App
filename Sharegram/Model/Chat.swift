@@ -6,10 +6,13 @@
 //
 
 import Foundation
-import Firebase
 
-struct Chat: Identifiable, Hashable, Codable {
-    let id: String
+protocol ModelProtocol: Codable, Encodable {
+    var id: String { get set }
+}
+
+struct Chat: Identifiable, Hashable, ModelProtocol {
+    var id: String
     let fromId: String
     var fromUser: User?
     let toId: String
@@ -17,54 +20,50 @@ struct Chat: Identifiable, Hashable, Codable {
     var messages: [Message]?
     var lastMessage: String?
     var hasUnread: Bool
-    let timestamp: Timestamp
+
 }
 
 extension Chat {
     static let MOCK_CHAT: [Chat] = [
         Chat(
             id: UUID().uuidString,
-            fromId: UUID().uuidString,
+            fromId: User.MOCK_USERS[0].id,
             fromUser: User.MOCK_USERS[0],
             toId: UUID().uuidString,
             toUser: User.MOCK_USERS[1],
             messages: Message.MOCK_MESSAGES,
             lastMessage: "Última mensagem",
-            hasUnread: true,
-            timestamp: Timestamp()
+            hasUnread: true
         ),
         Chat(
             id: UUID().uuidString,
-            fromId: UUID().uuidString,
+            fromId: User.MOCK_USERS[0].id,
             fromUser: User.MOCK_USERS[0],
             toId: UUID().uuidString,
-            toUser: User.MOCK_USERS[1],
+            toUser: User.MOCK_USERS[2],
             messages: Message.MOCK_MESSAGES,
             lastMessage: "Última mensagem",
-            hasUnread: false,
-            timestamp: Timestamp()
+            hasUnread: false
         ),
         Chat(
             id: UUID().uuidString,
-            fromId: UUID().uuidString,
+            fromId: User.MOCK_USERS[0].id,
             fromUser: User.MOCK_USERS[0],
             toId: UUID().uuidString,
-            toUser: User.MOCK_USERS[1],
+            toUser: User.MOCK_USERS[0],
             messages: Message.MOCK_MESSAGES,
             lastMessage: "Última mensagem",
-            hasUnread: true,
-            timestamp: Timestamp()
+            hasUnread: true
         ),
         Chat(
             id: UUID().uuidString,
-            fromId: UUID().uuidString,
+            fromId: User.MOCK_USERS[0].id,
             fromUser: User.MOCK_USERS[0],
             toId: UUID().uuidString,
-            toUser: User.MOCK_USERS[1],
+            toUser: User.MOCK_USERS[2],
             messages: Message.MOCK_MESSAGES,
             lastMessage: "Última mensagem",
-            hasUnread: false,
-            timestamp: Timestamp()
+            hasUnread: false
         ),
     ]
 }

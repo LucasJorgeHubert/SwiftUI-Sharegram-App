@@ -8,37 +8,15 @@
 import SwiftUI
 
 struct SearchView: View {
-    @State var searchText = ""
     @StateObject var viewModel = SearchViewModel()
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing:12) {
-                    ForEach(viewModel.users) { user in
-                        NavigationLink(value: user) {
-                            // MARK: - User search cell
-                            HStack {
-                                // MARK: - User image
-                                CircularProfileImageView(user: user, size: .small)
-                                
-                                // MARK: - Username and name
-                                VStack(alignment: .leading) {
-                                    Text(user.username)
-                                        .fontWeight(.bold)
-                                    
-                                    Text(user.fullname ?? "")
-                                }
-                                .foregroundColor(.black)
-                                .font(.footnote)
-                                
-                                Spacer()
-                            }
-                            .padding(.horizontal)
-                        }
-                    }
+                    ListUsersView(users: viewModel.filteredUsers())
                 }
-                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search...")
+                .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search...")
             }
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)

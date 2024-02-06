@@ -11,6 +11,8 @@ class PostGridViewModel: ObservableObject {
     private let user: User
     @Published var posts = [Post]()
     
+    let postClient: PostClientProtocol = PostClient()
+    
     init(user: User) {
         self.user = user
         
@@ -19,7 +21,7 @@ class PostGridViewModel: ObservableObject {
     
     @MainActor
     func fetchUserPosts() async throws{
-        self.posts = try await PostService.fetchUserPosts(uid: user.id)
+        self.posts = try await postClient.fetchUserPosts(uid: user.id)
         
         for i in 0 ..< posts.count {
             posts[i].user = self.user

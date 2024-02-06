@@ -33,8 +33,8 @@ struct FeedView: View {
                         .frame(width: 110, height: 32)
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        //
+                    NavigationLink {
+                        ChatView()
                     } label: {
                         Image(systemName: "paperplane.circle.fill")
                             .imageScale(.large)
