@@ -8,8 +8,8 @@
 import Foundation
 import Firebase
 
-struct User: Identifiable, Hashable, Codable {
-    let id: String
+struct User: Identifiable, Hashable, ModelProtocol {
+    var id: String
     var username: String
     var profileImageURL: String?
     var fullname: String?
@@ -19,6 +19,15 @@ struct User: Identifiable, Hashable, Codable {
     var isCurrentUser: Bool {
         guard let currentUid = Auth.auth().currentUser?.uid else { return false }
         return currentUid == id
+    }
+    
+    var currentUser: User? {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return nil }
+        if currentUid == id {
+            return self
+        } else {
+            return nil
+        }
     }
 }
 
@@ -44,7 +53,6 @@ extension User {
             id: NSUUID().uuidString,
             username: "pam_pam",
             profileImageURL: nil,
-            fullname: "",
             bio: "",
             email: "beesly.pam@office.com"
         ),

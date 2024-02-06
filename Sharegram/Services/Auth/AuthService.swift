@@ -17,6 +17,8 @@ class AuthService {
     
     static let shared = AuthService()
     
+    var userClient: UserClientProtocol = UserClient()
+    
     init() {
         Task { try await loadUserData() }
     }
@@ -47,7 +49,7 @@ class AuthService {
     func loadUserData() async throws {
         self.userSession = Auth.auth().currentUser
         guard let currentUid = userSession?.uid else { return }
-        self.currentUser = try await UserService.fetchUser(withUid: currentUid)
+        self.currentUser = try await userClient.getUser(byId: currentUid)
     }
     
     func signout() {

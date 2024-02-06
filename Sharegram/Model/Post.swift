@@ -8,8 +8,8 @@
 import Foundation
 import Firebase
 
-struct Post: Identifiable, Hashable, Codable {
-    let id: String
+struct Post: Identifiable, Hashable, ModelProtocol {
+    var id: String
     let ownerUid: String
     let caption: String
     var likes: Int
