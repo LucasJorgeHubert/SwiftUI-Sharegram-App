@@ -24,8 +24,10 @@ class PostClient: PostClientProtocol {
         for i in 0 ..< posts.count {
             let post = posts[i]
             let ownerUid = post.ownerUid
-            let postUser = try await userClient.getUser(byId: ownerUid)
-            posts[i].user = postUser
+            await userClient.getUser(byId: ownerUid) { user, _ in
+                posts[i].user = user
+            }
+            
         }
         
         return posts

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct ChatView: View {
     @StateObject var viewModel = ChatViewModel()
@@ -94,6 +95,25 @@ struct ChatView: View {
                 }
             }
         }
+        .popup(isPresented: $viewModel.showPopup) {
+            ToastTopFirst(text: viewModel.popupMessage)
+        } customize: {
+            $0.autohideIn(3)
+                .type(.toast)
+                .position(.bottom)
+        }
+    }
+}
+
+struct ToastTopFirst: View {
+    
+    var text = ""
+    var body: some View {
+        Text(text)
+            .foregroundColor(.white)
+            .padding(32)
+            .frame(maxWidth: .infinity)
+            .background(.purple)
     }
 }
 

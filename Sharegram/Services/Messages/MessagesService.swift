@@ -6,10 +6,11 @@
 //
 import Firebase
 import SwiftUI
+import Foundation
 
 protocol MessagesServiceProtocol {
-    func getChats() async throws -> [Chat]
     func createNewChats(with chat: Chat) async throws
+    func loadChats(completion: @escaping ([Chat], Error?) -> Void) async
     func sendMessage()
     func getMessages()
     func getLastMessage()
@@ -22,10 +23,13 @@ class MessagesService: MessagesServiceProtocol {
     
     let dispatcher = APIDispatcher()
     
-    func getChats() async throws -> [Chat] {
-        let chats: [Chat] = try await dispatcher.getListObject(apiRouter: .getAllChats)
-        
-        return chats
+    func loadChats(completion: @escaping ([Chat], Error?) -> Void) async {
+        do {
+            let chats: [Chat] = try await dispatcher.getListObject(apiRouter: .getAllChats)
+            completion(chats, nil)
+        } catch {
+            completion([], error)
+        }
     }
     
     func createNewChats(with chat: Chat) async throws {

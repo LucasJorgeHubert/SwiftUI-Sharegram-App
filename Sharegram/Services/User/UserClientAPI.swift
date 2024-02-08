@@ -8,7 +8,7 @@
 import Foundation
 
 protocol UserClientProtocol {
-    func getUser(byId id: String) async throws -> User
+    func getUser(byId id: String, completion: @escaping (User?, Error?) -> Void) async
     func getAllUsers() async throws -> [User]
 }
 
@@ -27,5 +27,14 @@ class UserClient: UserClientProtocol {
     
     func updateUserProfile(updatedUser: User) async throws {
         try await dispatcher.updateObject(apiRouter: .updateUser(updatedUser: updatedUser))
+    }
+    
+    func getUser(byId id: String, completion: @escaping (User?, Error?) -> Void) async {
+        do {
+            let user: User = try await dispatcher.getObjectWithParam(apiRouter: .getUserById(userId: id))
+                completion(user, nil)
+        } catch {
+            completion(nil, error)
+        }
     }
 }

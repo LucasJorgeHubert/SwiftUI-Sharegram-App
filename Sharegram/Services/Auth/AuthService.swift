@@ -24,13 +24,15 @@ class AuthService {
     }
     
     @MainActor
-    func login(withEmail email: String, password: String) async throws {
+    func login(withEmail email: String, password: String, completion: @escaping (AuthErrorHandling?) -> Void) async {
         do {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             self.userSession = result.user
             try await loadUserData()
         } catch {
-            print("DEBUG: Failed to login user with error: \(error.localizedDescription)")
+            if let err = error as NSError? {
+                completion(AuthErrorHandling(errorCode: err.code))
+            }
         }
     }
     
@@ -49,7 +51,14 @@ class AuthService {
     func loadUserData() async throws {
         self.userSession = Auth.auth().currentUser
         guard let currentUid = userSession?.uid else { return }
-        self.currentUser = try await userClient.getUser(byId: currentUid)
+        await userClient.getUser(byId: currentUid) { user, error in
+            if error != nil {
+                print(error?.localizedDescription)
+            }
+            
+            self.currentUser = user
+            
+        }
     }
     
     func signout() {

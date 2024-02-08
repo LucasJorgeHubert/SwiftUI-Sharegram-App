@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PopupView
 
 struct LoginView: View {
     
@@ -75,6 +76,12 @@ struct LoginView: View {
                 }
 
             }
+        }
+        .popup(isPresented: $viewModel.showErrorMessage) {
+            ToastTopFirst(text: viewModel.errorMessage)
+        } customize: {
+            $0.position(.bottom)
+                .type(.toast)
         }
     }
 }

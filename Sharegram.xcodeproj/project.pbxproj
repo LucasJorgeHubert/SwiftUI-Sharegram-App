@@ -12,6 +12,10 @@
 		692E5DAB2B71A14800E53285 /* APIRouter+Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DAA2B71A14800E53285 /* APIRouter+Object.swift */; };
 		692E5DAD2B71A16500E53285 /* APIRouter+Param.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DAC2B71A16500E53285 /* APIRouter+Param.swift */; };
 		692E5DB02B72567B00E53285 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 692E5DAF2B72567B00E53285 /* PopupView */; };
+		692E5DBD2B741E2600E53285 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DBC2B741E2600E53285 /* APIConfig.swift */; };
+		692E5DC32B750C1F00E53285 /* AuthErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DC22B750C1F00E53285 /* AuthErrorHandling.swift */; };
+		692E5DC82B75653800E53285 /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DC62B75653700E53285 /* MessagesService.swift */; };
+		692E5DC92B75653800E53285 /* MessagesClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692E5DC72B75653700E53285 /* MessagesClientMock.swift */; };
 		C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */; };
 		C902D1792A7AE4BB00BFA324 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1782A7AE4BB00BFA324 /* LoginViewModel.swift */; };
 		C902D17F2A7AF7CF00BFA324 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D17E2A7AF7CF00BFA324 /* SearchViewModel.swift */; };
@@ -68,7 +72,6 @@
 		C9D973292A7AB0210013EB4A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D973282A7AB0210013EB4A /* AuthService.swift */; };
 		C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D9732B2A7AB1F10013EB4A /* ContentView.swift */; };
 		C9D9732F2A7AB2480013EB4A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D9732E2A7AB2480013EB4A /* ContentViewModel.swift */; };
-		C9F623DC2AD7A494008593C1 /* MessagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F623DB2AD7A494008593C1 /* MessagesService.swift */; };
 		C9F623DE2AD7A675008593C1 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F623DD2AD7A675008593C1 /* Chat.swift */; };
 		C9F623E02AD8B830008593C1 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F623DF2AD8B830008593C1 /* Message.swift */; };
 		C9F623E52AD8BCC4008593C1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F623E42AD8BCC4008593C1 /* ChatView.swift */; };
@@ -98,6 +101,10 @@
 		692E5DA82B71A11400E53285 /* APIRouter+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRouter+Path.swift"; sourceTree = "<group>"; };
 		692E5DAA2B71A14800E53285 /* APIRouter+Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRouter+Object.swift"; sourceTree = "<group>"; };
 		692E5DAC2B71A16500E53285 /* APIRouter+Param.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIRouter+Param.swift"; sourceTree = "<group>"; };
+		692E5DBC2B741E2600E53285 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
+		692E5DC22B750C1F00E53285 /* AuthErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorHandling.swift; sourceTree = "<group>"; };
+		692E5DC62B75653700E53285 /* MessagesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesService.swift; path = Sharegram/Services/Messages/MessagesService.swift; sourceTree = SOURCE_ROOT; };
+		692E5DC72B75653700E53285 /* MessagesClientMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessagesClientMock.swift; path = Sharegram/Services/Messages/MessagesClientMock.swift; sourceTree = SOURCE_ROOT; };
 		C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C902D1782A7AE4BB00BFA324 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C902D17E2A7AF7CF00BFA324 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -152,7 +159,6 @@
 		C9D973282A7AB0210013EB4A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C9D9732B2A7AB1F10013EB4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C9D9732E2A7AB2480013EB4A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		C9F623DB2AD7A494008593C1 /* MessagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesService.swift; sourceTree = "<group>"; };
 		C9F623DD2AD7A675008593C1 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C9F623DF2AD8B830008593C1 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C9F623E42AD8BCC4008593C1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -205,7 +211,8 @@
 		692E5DB22B72598D00E53285 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				C9F623DB2AD7A494008593C1 /* MessagesService.swift */,
+				692E5DC72B75653700E53285 /* MessagesClientMock.swift */,
+				692E5DC62B75653700E53285 /* MessagesService.swift */,
 			);
 			name = Message;
 			path = "New Group";
@@ -451,6 +458,8 @@
 				692E5DB22B72598D00E53285 /* Message */,
 				692E5DA72B71A0F600E53285 /* APIRouter */,
 				C939956F2B5B2DE100C32340 /* APIDispatcher.swift */,
+				692E5DBC2B741E2600E53285 /* APIConfig.swift */,
+				692E5DC22B750C1F00E53285 /* AuthErrorHandling.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -728,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9F623E52AD8BCC4008593C1 /* ChatView.swift in Sources */,
+				692E5DC82B75653800E53285 /* MessagesService.swift in Sources */,
 				C9AD08E12A6F06C40045932C /* CreateUsernameView.swift in Sources */,
 				C92915522ADE020B001AECDF /* MessageViewModel.swift in Sources */,
 				C939956C2B5B2B5A00C32340 /* UserClientAPI.swift in Sources */,
@@ -740,12 +750,13 @@
 				692E5DAB2B71A14800E53285 /* APIRouter+Object.swift in Sources */,
 				C902D1852A7B0F5200BFA324 /* EditProfileViewModel.swift in Sources */,
 				C9C99E7A2A28377500B3572C /* SearchView.swift in Sources */,
-				C9F623DC2AD7A494008593C1 /* MessagesService.swift in Sources */,
 				C9AD6A072A21A84100F727F2 /* ProfileView.swift in Sources */,
 				C9AD69C92A21A0BF00F727F2 /* SharegramApp.swift in Sources */,
 				C9060F832A6F6ACC00EF70F8 /* User.swift in Sources */,
 				C9F623E72AD8BCCF008593C1 /* ChatViewModel.swift in Sources */,
 				C940C1722A2E3099005A7A99 /* SGTextInputModifier.swift in Sources */,
+				692E5DC92B75653800E53285 /* MessagesClientMock.swift in Sources */,
+				692E5DC32B750C1F00E53285 /* AuthErrorHandling.swift in Sources */,
 				C9F623DE2AD7A675008593C1 /* Chat.swift in Sources */,
 				C9D973182A7A0BF90013EB4A /* UploadPostView.swift in Sources */,
 				C9AD6A0A2A21AD2200F727F2 /* UserStatView.swift in Sources */,
@@ -764,6 +775,7 @@
 				C9D9732C2A7AB1F10013EB4A /* ContentView.swift in Sources */,
 				C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */,
 				C9D973122A79FEBF0013EB4A /* Post.swift in Sources */,
+				692E5DBD2B741E2600E53285 /* APIConfig.swift in Sources */,
 				C940C1702A2E2CFD005A7A99 /* AddEmailView.swift in Sources */,
 				C9F623E02AD8B830008593C1 /* Message.swift in Sources */,
 				C9D973162A7A08FF0013EB4A /* ProfileHeaderView.swift in Sources */,
