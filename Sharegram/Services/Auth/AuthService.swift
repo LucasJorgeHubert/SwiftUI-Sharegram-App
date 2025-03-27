@@ -23,6 +23,7 @@ class AuthService {
         Task { try await loadUserData() }
     }
     
+    // TODO: - Check user login
     @MainActor
     func login(withEmail email: String, password: String) async throws {
         do {
@@ -34,6 +35,7 @@ class AuthService {
         }
     }
     
+    // TODO: - Check user registration
     @MainActor
     func createUser(withEmail email: String, password: String, username: String) async throws {
         do {
