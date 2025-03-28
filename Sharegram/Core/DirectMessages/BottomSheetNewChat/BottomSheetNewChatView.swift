@@ -13,36 +13,26 @@ struct BottomSheetNewChatView: View {
     
     @State var selectedUser: User?
     @State private var navigateToNewView: Bool = false
+    
+    @State var searchText: String = ""
 
     var body: some View {
         NavigationStack {
             VStack {
+                TextField("Search user", text: $searchText)
+                    .padding()
+                    .background(.quinary)
+                    .cornerRadius(10)
+                    .padding()
+                
                 ScrollView {
                     LazyVStack {
-                        SelectListUsersView(users: viewModel.users, selectedUser: $selectedUser)
+                        SelectListUsersView(users: viewModel.users)
                     }
                 }
             }
-            .padding()
             .navigationTitle("New Chat")
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        Task {
-                            guard let usr = selectedUser else { return }
-                            try? await viewModel.newChat(to: usr)
-                            
-                            navigateToNewView = true
-                            
-                            dismiss()
-                        }
-                    }, label: {
-                        Text("Done")
-                            .disabled(selectedUser == nil ? true : false)
-                    })
-                }
-            }
         }
     }
 }
