@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9CD4B5C7-9FD9-4D5A-BEBC-49A983DB7544"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5779035C-FFE1-45B8-AF34-CF680893A9B6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sharegram/Services/Auth/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A8FEAF0-2152-44AF-92E6-A99B0231CDE5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sharegram/Services/Auth/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4A8FEAF0-2152-44AF-92E6-A99B0231CDE5 - 74d6bafabbc94d64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "4A8FEAF0-2152-44AF-92E6-A99B0231CDE5 - 3066e0370eb8d93e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "4A8FEAF0-2152-44AF-92E6-A99B0231CDE5 - 381fb70a2e440e66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "4A8FEAF0-2152-44AF-92E6-A99B0231CDE5 - b4c1184355fd6afb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B061C82-E291-4D81-878F-C1DD932C4044"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Sharegram/Services/Auth/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B061C82-E291-4D81-878F-C1DD932C4044 - 6e61434cc5555a15"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "4B061C82-E291-4D81-878F-C1DD932C4044 - 74d6bafabbc94d26"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Sharegram.AuthService.login(withEmail: Swift.String, password: Swift.String) async throws -&gt; ()"
+                  moduleName = "Sharegram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/Services/Auth/AuthService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

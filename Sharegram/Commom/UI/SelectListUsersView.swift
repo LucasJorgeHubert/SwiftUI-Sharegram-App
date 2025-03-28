@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SelectListUsersView: View {
     let users: [User]
-    @Binding var selectedUser: User?
     
     var body: some View {
     
@@ -17,7 +16,7 @@ struct SelectListUsersView: View {
             // MARK: - User search cell
             HStack {
                 // MARK: - User image
-                CircularProfileImageView(user: user, size: .small)
+                CircularProfileImageView(user: user, size: .icon)
                 
                 // MARK: - Username and name
                 VStack(alignment: .leading) {
@@ -30,22 +29,14 @@ struct SelectListUsersView: View {
                 .font(.footnote)
                 
                 Spacer()
-                
-                if selectedUser == user {
-                    Image(systemName: "checkmark.circle.fill")
-                        .padding(.trailing)
-                        .foregroundStyle(Color.purple)
-                }
             }
             .padding(.horizontal)
-            .onTapGesture {
-                selectedUser = user
-                print("User: ", user.username, "SelectedUser: ", selectedUser?.username ?? "")
-            }
+            .padding(.vertical, 4)
+            .onTapGesture { }
         }
     }
 }
 
 #Preview {
-    SelectListUsersView(users: User.MOCK_USERS, selectedUser: .constant(User.MOCK_USERS[0]))
+    SelectListUsersView(users: User.MOCK_USERS)
 }

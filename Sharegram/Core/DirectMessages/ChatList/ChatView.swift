@@ -82,6 +82,7 @@ struct ChatView: View {
             }
             .navigationTitle("Chats")
             .navigationBarTitleDisplayMode(.automatic)
+            .toolbar(.hidden, for: .tabBar)
             .toolbar {
                 ToolbarItem {
                     Button("New message", systemImage: "square.and.pencil") {
