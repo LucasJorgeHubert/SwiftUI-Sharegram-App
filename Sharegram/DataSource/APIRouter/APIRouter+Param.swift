@@ -16,13 +16,10 @@ extension APIRouter {
                 .updateUser:
             return ""
         case.getAllChats,
-                .getAllPosts,
                 .createChat:
             return ""
         case .getChat(let chatId):
             return chatId
-        case.getPostByUser(let userId):
-            return userId
         }
     }
 }

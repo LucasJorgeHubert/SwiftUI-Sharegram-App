@@ -1,30 +1,38 @@
 import Foundation
 import Firebase
 
+protocol APIDispatcherProtocol {
+    func getObjectWithParam<T: Codable>(apiRouter: APIRouterProtocol) async throws -> T
+    func getListObject<T: Codable>(apiRouter: APIRouterProtocol) async throws -> [T]
+    func getListObjectWithParameter<T: Codable>(apiRouter: APIRouterProtocol) async throws -> [T]
+    func createObject(apiRouter: APIRouterProtocol) async throws
+    func updateObject(apiRouter: APIRouterProtocol) async throws
+}
+
 extension DataSource {
     
-    class APIDispatcher {
+    class APIDispatcher: APIDispatcherProtocol {
         let firestore = Firestore.firestore()
         
-        func getObjectWithParam<T: Codable>(apiRouter: APIRouter) async throws -> T {
+        func getObjectWithParam<T: Codable>(apiRouter: APIRouterProtocol) async throws -> T {
             let collection = firestore.collection(apiRouter.path)
             let res = try await collection.document(apiRouter.param).getDocument()
             return try res.data(as: T.self)
         }
         
-        func getListObject<T: Codable>(apiRouter: APIRouter) async throws -> [T] {
+        func getListObject<T: Codable>(apiRouter: APIRouterProtocol) async throws -> [T] {
             let collection = firestore.collection(apiRouter.path)
             let res = try await collection.getDocuments()
             return try res.documents.compactMap { try $0.data(as: T.self) }
         }
         
-        func getListObjectWithParameter<T: Codable>(apiRouter: APIRouter) async throws -> [T] {
+        func getListObjectWithParameter<T: Codable>(apiRouter: APIRouterProtocol) async throws -> [T] {
             let collection = firestore.collection(apiRouter.path)
             let res = try await collection.whereField(apiRouter.field ?? "", isEqualTo: apiRouter.param).getDocuments()
             return try res.documents.compactMap { try $0.data(as: T.self) }
         }
         
-        func createObject(apiRouter: APIRouter) async throws {
+        func createObject(apiRouter: APIRouterProtocol) async throws {
             let collection = firestore.collection(apiRouter.path)
             let document = collection.document()
             
@@ -35,7 +43,7 @@ extension DataSource {
             try? await document.setData(encoded)
         }
         
-        func updateObject(apiRouter: APIRouter) async throws {
+        func updateObject(apiRouter: APIRouterProtocol) async throws {
             guard let updatedObject = apiRouter.object else { return }
             let collection = firestore.collection(apiRouter.path)
             let document = collection.document(updatedObject.id)

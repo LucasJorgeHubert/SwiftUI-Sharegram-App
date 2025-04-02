@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ModelProtocol: Codable, Encodable {
+public protocol ModelProtocol: Codable, Encodable {
     var id: String { get set }
 }
 

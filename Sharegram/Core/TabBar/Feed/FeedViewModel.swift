@@ -9,9 +9,9 @@ import Foundation
 import Firebase
 
 class FeedViewModel: ObservableObject {
-    @Published var posts = [Post]()
+    @Published var posts: [Domain.Post.Model.Post] = []
     
-    var postClient: PostClientProtocol = PostClient()
+    var postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl(user: User.MOCK_USERS[0])
     
     init() {
         Task {

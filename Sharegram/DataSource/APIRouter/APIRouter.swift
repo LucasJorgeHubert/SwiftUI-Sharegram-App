@@ -7,12 +7,7 @@
 
 import Foundation
 
-enum APIRouter {
-    
-    // MARK: - Posts
-    case getAllPosts
-    case getPostByUser(userId: String)
-    
+enum APIRouter: APIRouterProtocol {
     // MARK: - Chats
     case createChat(object: ModelProtocol)
     case getAllChats

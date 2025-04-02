@@ -10,7 +10,7 @@ import Kingfisher
 
 struct FeedCell: View {
     
-    let post: Post
+    let post: Domain.Post.Model.Post
     
     var body: some View {
         VStack {
@@ -101,6 +101,6 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell(post: Post.MOCK_POSTS[0])
+        FeedCell(post: Domain.Post.Model.Post.MOCK_POSTS[0])
     }
 }

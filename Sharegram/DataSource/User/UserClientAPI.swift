@@ -13,19 +13,19 @@ protocol UserClientProtocol {
 }
 
 class UserClient: UserClientProtocol {
-    let dispatcher = APIDispatcher()
+    let dispatcher = DataSource.APIDispatcher()
     
     func getUser(byId id: String) async throws -> User {
-        let request: User = try await dispatcher.getObjectWithParam(apiRouter: .getUserById(userId: id))
+        let request: User = try await dispatcher.getObjectWithParam(apiRouter: APIRouter.getUserById(userId: id))
         return request
     }
     
     func getAllUsers() async throws -> [User] {
-        let request: [User] = try await dispatcher.getListObject(apiRouter: .getAllUser)
+        let request: [User] = try await dispatcher.getListObject(apiRouter: APIRouter.getAllUser)
         return request
     }
     
     func updateUserProfile(updatedUser: User) async throws {
-        try await dispatcher.updateObject(apiRouter: .updateUser(updatedUser: updatedUser))
+        try await dispatcher.updateObject(apiRouter: APIRouter.updateUser(updatedUser: updatedUser))
     }
 }

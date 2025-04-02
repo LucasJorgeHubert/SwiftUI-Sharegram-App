@@ -20,9 +20,7 @@ extension APIRouter {
             return nil
         case .createChat(let object):
             return object
-        case .getAllPosts,
-                .getPostByUser:
-            return nil
+
         }
     }
 }

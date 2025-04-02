@@ -14,12 +14,9 @@ extension APIRouter {
                 .getAllUser,
                 .getAllChats,
                 .getChat,
-                .getAllPosts,
                 .createChat,
                 .updateUser:
             return nil
-        case .getPostByUser:
-            return "ownerUid"
         }
     }
 }

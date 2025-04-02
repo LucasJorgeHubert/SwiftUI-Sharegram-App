@@ -18,9 +18,6 @@ extension APIRouter {
                 .getChat,
                 .createChat:
             return "chat"
-        case .getAllPosts,
-                .getPostByUser:
-            return "posts"
         }
     }
 }

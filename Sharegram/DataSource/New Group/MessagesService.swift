@@ -20,16 +20,16 @@ class MessagesService: MessagesServiceProtocol {
     private static let chatCollection = Firestore.firestore().collection("chat")
     private static let messagesCollection = Firestore.firestore().collection("messages")
     
-    let dispatcher = APIDispatcher()
+    let dispatcher = DataSource.APIDispatcher()
     
     func getChats() async throws -> [Chat] {
-        let chats: [Chat] = try await dispatcher.getListObject(apiRouter: .getAllChats)
+        let chats: [Chat] = try await dispatcher.getListObject(apiRouter: APIRouter.getAllChats)
         
         return chats
     }
     
     func createNewChats(with chat: Chat) async throws {
-        try? await dispatcher.createObject(apiRouter: .createChat(object: chat))
+        try? await dispatcher.createObject(apiRouter: APIRouter.createChat(object: chat))
     }
     
     func sendMessage() {

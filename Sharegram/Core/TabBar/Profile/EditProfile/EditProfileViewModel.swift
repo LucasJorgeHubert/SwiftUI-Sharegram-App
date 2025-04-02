@@ -49,7 +49,7 @@ class EditProfileViewModel: ObservableObject {
         var updatedUser: User = user
         
         if let uiImage = uiImage {
-            let imageURL = try? await ImageUploader.uploadImage(image: uiImage)
+            let imageURL = try? await DataSource.Post.ImageUploader.uploadImage(image: uiImage)
             updatedUser.profileImageURL = imageURL
         }
         
