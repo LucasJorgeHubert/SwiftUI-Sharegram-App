@@ -18,7 +18,7 @@ struct SearchView: View {
                 }
                 .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search...")
             }
-            .navigationDestination(for: User.self, destination: { user in
+            .navigationDestination(for: Domain.User.Model.User.self, destination: { user in
                 ProfileView(user: user)
             })
             .navigationTitle("Explore")

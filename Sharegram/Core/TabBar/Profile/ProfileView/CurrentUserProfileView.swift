@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
     
-    let user: User
+    let user: Domain.User.Model.User
     
     var body: some View {
         NavigationStack {
@@ -41,6 +41,6 @@ struct CurrentUserProfileView: View {
 
 struct CurrentUserProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentUserProfileView(user: User.MOCK_USERS[0])
+        CurrentUserProfileView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }

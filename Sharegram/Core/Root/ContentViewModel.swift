@@ -14,7 +14,7 @@ class contentViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: User?
+    @Published var currentUser: Domain.User.Model.User?
     
     init() {
         setupSubscribers()

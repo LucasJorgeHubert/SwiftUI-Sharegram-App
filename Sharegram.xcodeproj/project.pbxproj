@@ -15,6 +15,7 @@
 		6938106A2D9DE2F7004BDF75 /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693810692D9DE2F7004BDF75 /* Domain.swift */; };
 		6938106C2D9DE3C8004BDF75 /* PostAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938106B2D9DE3C8004BDF75 /* PostAPIRouter.swift */; };
 		6938106F2D9DEA76004BDF75 /* PostRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938106E2D9DEA76004BDF75 /* PostRepositoryProtocol.swift */; };
+		693810722D9EC0AD004BDF75 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693810712D9EC0AD004BDF75 /* UserRepositoryProtocol.swift */; };
 		6941BB362D9730F800E39339 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941BB352D9730F800E39339 /* DataSource.swift */; };
 		6941BB382D9731C000E39339 /* APIRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941BB372D9731C000E39339 /* APIRouterProtocol.swift */; };
 		C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */; };
@@ -29,7 +30,7 @@
 		C92854772AE176710088B904 /* ListUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92854762AE176710088B904 /* ListUsersView.swift */; };
 		C928547C2AE31BEA0088B904 /* BottomSheetNewChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C928547B2AE31BEA0088B904 /* BottomSheetNewChatView.swift */; };
 		C92915522ADE020B001AECDF /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92915512ADE020B001AECDF /* MessageViewModel.swift */; };
-		C939956C2B5B2B5A00C32340 /* UserClientAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939956B2B5B2B5A00C32340 /* UserClientAPI.swift */; };
+		C939956C2B5B2B5A00C32340 /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939956B2B5B2B5A00C32340 /* UserRepositoryImpl.swift */; };
 		C939956E2B5B2D0B00C32340 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939956D2B5B2D0B00C32340 /* APIRouter.swift */; };
 		C93995702B5B2DE100C32340 /* APIDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C939956F2B5B2DE100C32340 /* APIDispatcher.swift */; };
 		C93A3D212A22D23A00E94C49 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A3D202A22D23A00E94C49 /* FeedView.swift */; };
@@ -106,6 +107,7 @@
 		693810692D9DE2F7004BDF75 /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		6938106B2D9DE3C8004BDF75 /* PostAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIRouter.swift; sourceTree = "<group>"; };
 		6938106E2D9DEA76004BDF75 /* PostRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepositoryProtocol.swift; sourceTree = "<group>"; };
+		693810712D9EC0AD004BDF75 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 		6941BB352D9730F800E39339 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		6941BB372D9731C000E39339 /* APIRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterProtocol.swift; sourceTree = "<group>"; };
 		C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		C92854762AE176710088B904 /* ListUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUsersView.swift; sourceTree = "<group>"; };
 		C928547B2AE31BEA0088B904 /* BottomSheetNewChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetNewChatView.swift; sourceTree = "<group>"; };
 		C92915512ADE020B001AECDF /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		C939956B2B5B2B5A00C32340 /* UserClientAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClientAPI.swift; sourceTree = "<group>"; };
+		C939956B2B5B2B5A00C32340 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
 		C939956D2B5B2D0B00C32340 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		C939956F2B5B2DE100C32340 /* APIDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDispatcher.swift; sourceTree = "<group>"; };
 		C93A3D202A22D23A00E94C49 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		693810642D9DE2C2004BDF75 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				693810702D9EC096004BDF75 /* Protocols */,
 				693810652D9DE2CA004BDF75 /* Models */,
 			);
 			path = User;
@@ -341,6 +344,14 @@
 			isa = PBXGroup;
 			children = (
 				6938106E2D9DEA76004BDF75 /* PostRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		693810702D9EC096004BDF75 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				693810712D9EC0AD004BDF75 /* UserRepositoryProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -418,7 +429,7 @@
 		C939956A2B5B2B4500C32340 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				C939956B2B5B2B5A00C32340 /* UserClientAPI.swift */,
+				C939956B2B5B2B5A00C32340 /* UserRepositoryImpl.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -809,7 +820,7 @@
 				C9F623E52AD8BCC4008593C1 /* ChatView.swift in Sources */,
 				C9AD08E12A6F06C40045932C /* CreateUsernameView.swift in Sources */,
 				C92915522ADE020B001AECDF /* MessageViewModel.swift in Sources */,
-				C939956C2B5B2B5A00C32340 /* UserClientAPI.swift in Sources */,
+				C939956C2B5B2B5A00C32340 /* UserRepositoryImpl.swift in Sources */,
 				C9D973292A7AB0210013EB4A /* AuthService.swift in Sources */,
 				C95D984D2ADF5011007EC120 /* BubbleMessage.swift in Sources */,
 				C93A3D232A22D24800E94C49 /* FeedCell.swift in Sources */,
@@ -860,6 +871,7 @@
 				C92854772AE176710088B904 /* ListUsersView.swift in Sources */,
 				C9619B6E2AC36A5B000A6E59 /* CircularProfileImageView.swift in Sources */,
 				C902D17F2A7AF7CF00BFA324 /* SearchViewModel.swift in Sources */,
+				693810722D9EC0AD004BDF75 /* UserRepositoryProtocol.swift in Sources */,
 				C9D973142A7A06E50013EB4A /* PostGridView.swift in Sources */,
 				6938106F2D9DEA76004BDF75 /* PostRepositoryProtocol.swift in Sources */,
 				C9D9731A2A7A0F160013EB4A /* UploadPostViewModel.swift in Sources */,

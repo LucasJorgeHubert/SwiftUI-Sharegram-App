@@ -13,11 +13,11 @@ extension DataSource.Post {
     struct RepositoryImpl: PostRepositoryProtocol {
         let dispatcher: APIDispatcherProtocol
         
-        private let user: User
+        private let user: Domain.User.Model.User
         
         init(
             dispatcher: APIDispatcherProtocol = DataSource.APIDispatcher(),
-            user: User
+            user: Domain.User.Model.User
         ) {
             self.dispatcher = dispatcher
             self.user = user

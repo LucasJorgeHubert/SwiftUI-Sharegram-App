@@ -18,17 +18,17 @@ struct Message: Identifiable, Hashable, ModelProtocol {
 
 extension Message {
     static let MOCK_MESSAGES: [Message] = [
-        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: User.MOCK_USERS[0].id, read: false, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: User.MOCK_USERS[0].id, read: false, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
-        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: User.MOCK_USERS[0].id, read: false, timestamp: Timestamp())
+        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: Domain.User.Model.User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: false, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: Domain.User.Model.User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: false, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Nam ullamcorper bibendum aliquet.", ownerId: Domain.User.Model.User.MOCK_USERS[1].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Sed eu interdum velit. Duis purus lectus, finibus vitae rutrum vel, efficitur malesuada lorem. Vivamus quis aliquam ipsum, ac bibendum leo.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: true, timestamp: Timestamp()),
+        Message(id: UUID().uuidString, message: "Vivamus semper metus in mi facilisis posuere.", ownerId: Domain.User.Model.User.MOCK_USERS[0].id, read: false, timestamp: Timestamp())
     ]
 }

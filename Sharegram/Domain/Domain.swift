@@ -8,7 +8,7 @@
 import Foundation
 
 public enum Domain {
-    public enum User { }
+    public enum User { public enum Model {} }
     public enum Post { public enum Model {} }
-    public enum Chat { }
+    public enum Chat { public enum Model {} }
 }

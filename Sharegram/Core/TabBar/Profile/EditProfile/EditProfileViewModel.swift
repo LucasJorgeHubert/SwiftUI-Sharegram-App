@@ -12,7 +12,7 @@ import SwiftUI
 
 @MainActor
 class EditProfileViewModel: ObservableObject {
-    @Published var user: User
+    @Published var user: Domain.User.Model.User
     @Published var selectedImage: PhotosPickerItem? {
         didSet { Task { await loadImage(fromItem: selectedImage) } }
     }
@@ -23,7 +23,7 @@ class EditProfileViewModel: ObservableObject {
     
     private var uiImage: UIImage?
     
-    init(user: User) {
+    init(user: Domain.User.Model.User) {
         self.user = user
         
         if let fullname = user.fullname {
@@ -46,7 +46,7 @@ class EditProfileViewModel: ObservableObject {
     
     func updateUserData() async throws {
         
-        var updatedUser: User = user
+        var updatedUser: Domain.User.Model.User = user
         
         if let uiImage = uiImage {
             let imageURL = try? await DataSource.Post.ImageUploader.uploadImage(image: uiImage)
@@ -63,7 +63,7 @@ class EditProfileViewModel: ObservableObject {
         
         if updatedUser != user {
 //            try await Firestore.firestore().collection("users").document(user.id).updateData(data)
-            try await UserClient().updateUserProfile(updatedUser: updatedUser)
+            try await DataSource.User.RepositoryImpl().updateUserProfile(updatedUser: updatedUser)
         }
     }
 }

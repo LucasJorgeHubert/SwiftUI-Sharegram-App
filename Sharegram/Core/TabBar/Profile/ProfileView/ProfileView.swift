@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    let user: User
+    let user: Domain.User.Model.User
     
     var body: some View {
         ScrollView {
@@ -27,6 +27,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(user: User.MOCK_USERS[0])
+        ProfileView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }

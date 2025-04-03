@@ -11,7 +11,7 @@ struct BottomSheetNewChatView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = BottomSheetViewModel()
     
-    @State var selectedUser: User?
+    @State var selectedUser: Domain.User.Model.User?
     @State private var navigateToNewView: Bool = false
     
     @State var searchText: String = ""

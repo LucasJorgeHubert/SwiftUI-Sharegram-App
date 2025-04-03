@@ -17,7 +17,7 @@ extension Domain.Post.Model {
         var likes: Int
         let imageURL: String
         let timestamp: Timestamp
-        var user: User?
+        var user: Domain.User.Model.User?
         
         static let postNumber = ["1", "2", "3", "4"]
         static var MOCK_POSTS: [Post] = [
@@ -28,7 +28,7 @@ extension Domain.Post.Model {
                 likes: 8,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
-                user: User.MOCK_USERS[0]
+                user: Domain.User.Model.User.MOCK_USERS[0]
             ),
             .init(
                 id: UUID().uuidString,
@@ -37,7 +37,7 @@ extension Domain.Post.Model {
                 likes: 3458,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
-                user: User.MOCK_USERS[1]
+                user: Domain.User.Model.User.MOCK_USERS[1]
             ),
             .init(
                 id: UUID().uuidString,
@@ -46,7 +46,7 @@ extension Domain.Post.Model {
                 likes: 245,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
-                user: User.MOCK_USERS[2]
+                user: Domain.User.Model.User.MOCK_USERS[2]
             ),
             .init(
                 id: UUID().uuidString,
@@ -55,7 +55,7 @@ extension Domain.Post.Model {
                 likes: 45,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
-                user: User.MOCK_USERS[0]
+                user: Domain.User.Model.User.MOCK_USERS[0]
             ),
         ]
     }

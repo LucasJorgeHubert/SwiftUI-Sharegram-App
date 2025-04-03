@@ -29,7 +29,7 @@ enum ProfileImageSize {
 }
 
 struct CircularProfileImageView: View {
-    let user : User
+    let user : Domain.User.Model.User
     let size: ProfileImageSize
     
     var body: some View {
@@ -54,6 +54,6 @@ struct CircularProfileImageView: View {
 
 struct CircularProfileImageView_Previews: PreviewProvider {
     static var previews: some View {
-        CircularProfileImageView(user: User.MOCK_USERS[0], size: .medium)
+        CircularProfileImageView(user: Domain.User.Model.User.MOCK_USERS[0], size: .medium)
     }
 }

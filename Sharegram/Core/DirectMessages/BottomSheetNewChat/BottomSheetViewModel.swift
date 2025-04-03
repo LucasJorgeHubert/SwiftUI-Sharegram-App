@@ -11,9 +11,9 @@ import SwiftUI
 class BottomSheetViewModel: ObservableObject {
     
     var messageService: MessagesServiceProtocol = MessagesService()
-    var userClient: UserClientProtocol = UserClient()
+    var userClient: UserRepositoryProtocol = DataSource.User.RepositoryImpl()
     
-    @Published var users: [User] = [User]()
+    @Published var users: [Domain.User.Model.User] = [Domain.User.Model.User]()
     
     init() {
         Task { try await fetchAllUsers() }
@@ -25,7 +25,7 @@ class BottomSheetViewModel: ObservableObject {
         self.users.removeAll { $0.isCurrentUser }
     }
     
-    func newChat(to: User) async throws {
+    func newChat(to: Domain.User.Model.User) async throws {
         guard let from = AuthService.shared.currentUser else { return }
         let chat: Chat = Chat(id: "", fromId: from.id, toId: to.id, hasUnread: false)
         

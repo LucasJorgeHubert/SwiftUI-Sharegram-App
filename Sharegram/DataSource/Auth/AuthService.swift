@@ -13,13 +13,14 @@ import Firebase
 class AuthService {
     
     @Published var userSession: FirebaseAuth.User?
-    @Published var currentUser: User?
+    @Published var currentUser: Domain.User.Model.User?
     
     static let shared = AuthService()
     
-    var userClient: UserClientProtocol = UserClient()
+    var userRepository: UserRepositoryProtocol
     
-    init() {
+    init(userRepository: UserRepositoryProtocol = DataSource.User.RepositoryImpl()) {
+        self.userRepository = userRepository
         Task { try await loadUserData() }
     }
     
@@ -51,7 +52,7 @@ class AuthService {
     func loadUserData() async throws {
         self.userSession = Auth.auth().currentUser
         guard let currentUid = userSession?.uid else { return }
-        self.currentUser = try await userClient.getUser(byId: currentUid)
+        self.currentUser = try await userRepository.getUser(byId: currentUid)
     }
     
     func signout() {
@@ -61,7 +62,7 @@ class AuthService {
     }
     
     private func uploadUserData(uid: String, email: String, username: String) async {
-        let user = User(id: uid, username: username, email: email)
+        let user = Domain.User.Model.User(id: uid, username: username, email: email)
         self.currentUser = user
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         

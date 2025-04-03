@@ -16,6 +16,6 @@ enum APIRouter: APIRouterProtocol {
     // MARK: - User
     case getUserById(userId: String)
     case getAllUser
-    case updateUser(updatedUser: User)
+    case updateUser(updatedUser: Domain.User.Model.User)
     
 }

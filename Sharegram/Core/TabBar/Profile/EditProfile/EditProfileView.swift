@@ -13,7 +13,7 @@ struct EditProfileView: View {
     @State private var selectedImage: PhotosPickerItem?
     @StateObject var viewModel: EditProfileViewModel
     
-    init(user: User) {
+    init(user: Domain.User.Model.User) {
         self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
     }
     
@@ -96,6 +96,6 @@ struct EditProfileRowView: View {
 
 struct EditProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        EditProfileView(user: User.MOCK_USERS[0])
+        EditProfileView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }

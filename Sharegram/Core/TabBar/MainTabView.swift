@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTabView: View {
-    let user: User
+    let user: Domain.User.Model.User
     @State private var selectedIndex = 0
     
     var body: some View {
@@ -60,6 +60,6 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView(user: User.MOCK_USERS[0])
+        MainTabView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }

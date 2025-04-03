@@ -11,7 +11,7 @@ import Firebase
 class FeedViewModel: ObservableObject {
     @Published var posts: [Domain.Post.Model.Post] = []
     
-    var postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl(user: User.MOCK_USERS[0])
+    var postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl(user: Domain.User.Model.User.MOCK_USERS[0])
     
     init() {
         Task {

@@ -8,21 +8,22 @@
 import Foundation
 
 class SearchViewModel: ObservableObject {
-    @Published var users: [User] = [User]()
+    @Published var users: [Domain.User.Model.User] = [Domain.User.Model.User]()
     @Published var searchText: String = ""
     
-    var userClient: UserClientProtocol = UserClient()
+    var userRepository: UserRepositoryProtocol
     
-    init() {
+    init(userRepository: UserRepositoryProtocol = DataSource.User.RepositoryImpl()) {
+        self.userRepository = userRepository
         Task { try await fetchAllUsers() }
     }
     
     @MainActor
     func fetchAllUsers() async throws {
-        self.users = try await userClient.getAllUsers()
+        self.users = try await userRepository.getAllUsers()
     }
     
-    func filteredUsers() -> [User] {
+    func filteredUsers() -> [Domain.User.Model.User] {
         if searchText.isEmpty {
             return users
         } else {
