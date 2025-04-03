@@ -1,17 +1,9 @@
-//
-//  AuthFile.swift
-//  Sharegram
-//
-//  Created by Lucas Hubert on 02/08/23.
-//
-
 import Foundation
 import FirebaseAuth
 import FirebaseFirestoreSwift
 import Firebase
 
 class AuthService {
-    
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: Domain.User.Model.User?
     
@@ -24,7 +16,6 @@ class AuthService {
         Task { try await loadUserData() }
     }
     
-    // TODO: - Check user login
     @MainActor
     func login(withEmail email: String, password: String) async throws {
         do {
@@ -36,7 +27,6 @@ class AuthService {
         }
     }
     
-    // TODO: - Check user registration
     @MainActor
     func createUser(withEmail email: String, password: String, username: String) async throws {
         do {

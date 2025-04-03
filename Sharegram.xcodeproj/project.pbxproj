@@ -353,6 +353,10 @@
 		6941BB322D9730B200E39339 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C9F623E12AD8BA26008593C1 /* DirectMessages */,
+				C9AD69FD2A21A37300F727F2 /* Authentication */,
+				C9AD6A002A21A38F00F727F2 /* Root */,
+				C9AD6A022A21A3AD00F727F2 /* TabBar */,
 				693810662D9DE2D1004BDF75 /* Chat */,
 				693810642D9DE2C2004BDF75 /* User */,
 				693810622D9DE2A8004BDF75 /* Post */,
@@ -507,7 +511,6 @@
 				6941BB322D9730B200E39339 /* Domain */,
 				692E5DB42B73B39300E53285 /* Commom */,
 				C93A3D2A2A22D9C300E94C49 /* Info.plist */,
-				C9AD69FC2A21A33D00F727F2 /* Core */,
 				C9AD69FB2A21A33B00F727F2 /* Extensions */,
 				C9AD69F82A21A33000F727F2 /* App */,
 				C9AD69CC2A21A0C100F727F2 /* Assets.xcassets */,
@@ -556,17 +559,6 @@
 				C93A3D262A22D99F00E94C49 /* GreatVibes-Regular.ttf */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		C9AD69FC2A21A33D00F727F2 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				C9F623E12AD8BA26008593C1 /* DirectMessages */,
-				C9AD69FD2A21A37300F727F2 /* Authentication */,
-				C9AD6A002A21A38F00F727F2 /* Root */,
-				C9AD6A022A21A3AD00F727F2 /* TabBar */,
-			);
-			path = Core;
 			sourceTree = "<group>";
 		};
 		C9AD69FD2A21A37300F727F2 /* Authentication */ = {
