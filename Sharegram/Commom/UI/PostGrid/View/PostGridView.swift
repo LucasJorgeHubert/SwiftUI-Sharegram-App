@@ -11,7 +11,7 @@ import Kingfisher
 struct PostGridView: View {
     @StateObject var viewModel: PostGridViewModel
     
-    init(user: User) {
+    init(user: Domain.User.Model.User) {
         self._viewModel = StateObject(wrappedValue: PostGridViewModel(user: user))
     }
     
@@ -37,6 +37,6 @@ struct PostGridView: View {
 
 struct PostGridView_Previews: PreviewProvider {
     static var previews: some View {
-        PostGridView(user: User.MOCK_USERS[0])
+        PostGridView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }

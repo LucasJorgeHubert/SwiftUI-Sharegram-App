@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListUsersView: View {
-    let users: [User]
+    let users: [Domain.User.Model.User]
     
     var body: some View {
     
@@ -38,5 +38,5 @@ struct ListUsersView: View {
 }
 
 #Preview {
-    ListUsersView(users: User.MOCK_USERS)
+    ListUsersView(users: Domain.User.Model.User.MOCK_USERS)
 }

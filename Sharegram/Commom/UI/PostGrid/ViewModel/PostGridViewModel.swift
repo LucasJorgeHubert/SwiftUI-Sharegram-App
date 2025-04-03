@@ -8,12 +8,12 @@
 import Foundation
 
 class PostGridViewModel: ObservableObject {
-    private let user: User
-    @Published var posts = [Post]()
+    private let user: Domain.User.Model.User
+    @Published var posts: [Domain.Post.Model.Post] = []
     
-    let postClient: PostClientProtocol = PostClient()
+    let postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl(user: Domain.User.Model.User.MOCK_USERS[0])
     
-    init(user: User) {
+    init(user: Domain.User.Model.User) {
         self.user = user
         
         Task { try await fetchUserPosts() }

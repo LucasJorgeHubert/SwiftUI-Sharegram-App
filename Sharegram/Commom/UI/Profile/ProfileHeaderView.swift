@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
-    let user: User
+    let user: Domain.User.Model.User
     @State private var showEditProfile = false
     
     var body: some View {
@@ -81,6 +81,6 @@ struct ProfileHeaderView: View {
 
 struct ProfileHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeaderView(user: User.MOCK_USERS[0])
+        ProfileHeaderView(user: Domain.User.Model.User.MOCK_USERS[0])
     }
 }
