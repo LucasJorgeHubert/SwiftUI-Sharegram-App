@@ -9,19 +9,23 @@ import Foundation
 
 extension DataSource.User {
     
-    class RepositoryImpl: UserRepositoryProtocol {
-        let dispatcher = DataSource.APIDispatcher()
+    public struct RepositoryImpl: UserRepositoryProtocol {
+        let dispatcher: APIDispatcherProtocol
+        
+        init(dispatcher: APIDispatcherProtocol = DataSource.APIDispatcher()) {
+            self.dispatcher = dispatcher
+        }
         
         func getUser(byId id: String) async throws -> Domain.User.Model.User {
-            return try await dispatcher.getObjectWithParam(apiRouter: APIRouter.getUserById(userId: id))
+            return try await dispatcher.getObjectWithParam(apiRouter: DataSource.User.APIRouter.getUserById(userId: id))
         }
         
         func getAllUsers() async throws -> [Domain.User.Model.User] {
-            return try await dispatcher.getListObject(apiRouter: APIRouter.getAllUser)
+            return try await dispatcher.getListObject(apiRouter: DataSource.User.APIRouter.getAllUser)
         }
         
         func updateUserProfile(updatedUser: Domain.User.Model.User) async throws {
-            try await dispatcher.updateObject(apiRouter: APIRouter.updateUser(updatedUser: updatedUser))
+            try await dispatcher.updateObject(apiRouter: DataSource.User.APIRouter.updateUser(updatedUser: updatedUser))
         }
     }
 }

@@ -3,7 +3,7 @@ import SwiftUI
 struct MessageView: View {
     @StateObject var viewModel = MessageViewModel()
     
-    let chat: Chat
+    let chat: Domain.Chat.Model.Chat
 
     var body: some View {
         NavigationStack {
@@ -67,6 +67,6 @@ struct MessageView: View {
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageView(chat: Chat.MOCK_CHAT[0])
+        MessageView(chat: Domain.Chat.Model.Chat.MOCK_CHAT[0])
     }
 }

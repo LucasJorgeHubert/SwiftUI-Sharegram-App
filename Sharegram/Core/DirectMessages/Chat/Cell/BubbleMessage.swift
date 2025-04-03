@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BubbleMessage: View {
-    var message: Message
+    var message: Domain.Chat.Model.Message
     var isFromCurrentUser: Bool
     
     var body: some View {
@@ -36,6 +36,6 @@ struct BubbleMessage: View {
 
 struct BubbleMessage_Previews: PreviewProvider {
     static var previews: some View {
-        BubbleMessage(message: Message.MOCK_MESSAGES[0], isFromCurrentUser: false)
+        BubbleMessage(message: Domain.Chat.Model.Message.MOCK_MESSAGES[0], isFromCurrentUser: false)
     }
 }

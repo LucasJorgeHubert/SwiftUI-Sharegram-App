@@ -9,14 +9,13 @@ import Foundation
 
 @MainActor
 class ChatViewModel: ObservableObject {
-    @Published var chats = [Chat]()
+    @Published var chats = [Domain.Chat.Model.Chat]()
     
-    private let messageService: MessagesServiceProtocol = MessagesService()
+    private let messageService: ChatRepositoryProtocol = DataSource.Chat.ChatRepositoryImpl()
     
     init() {
         Task { try await fetchChats() }
     }
-    
     
     func fetchChats() async throws {
         self.chats = try await messageService.getChats()
