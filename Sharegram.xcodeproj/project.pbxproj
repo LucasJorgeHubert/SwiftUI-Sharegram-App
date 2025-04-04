@@ -15,6 +15,7 @@
 		693810742D9EDE06004BDF75 /* UserAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693810732D9EDE06004BDF75 /* UserAPIRouter.swift */; };
 		693810762D9EDFE1004BDF75 /* ChatAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693810752D9EDFE1004BDF75 /* ChatAPIRouter.swift */; };
 		693810792D9EE0EE004BDF75 /* ChatRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693810782D9EE0EE004BDF75 /* ChatRepositoryProtocol.swift */; };
+		6938107C2D9F13F4004BDF75 /* GetFeedPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938107B2D9F13F4004BDF75 /* GetFeedPostsUseCase.swift */; };
 		6941BB362D9730F800E39339 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941BB352D9730F800E39339 /* DataSource.swift */; };
 		6941BB382D9731C000E39339 /* APIRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6941BB372D9731C000E39339 /* APIRouterProtocol.swift */; };
 		C902D1772A7ADA2B00BFA324 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */; };
@@ -105,6 +106,7 @@
 		693810732D9EDE06004BDF75 /* UserAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIRouter.swift; sourceTree = "<group>"; };
 		693810752D9EDFE1004BDF75 /* ChatAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAPIRouter.swift; sourceTree = "<group>"; };
 		693810782D9EE0EE004BDF75 /* ChatRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRepositoryProtocol.swift; sourceTree = "<group>"; };
+		6938107B2D9F13F4004BDF75 /* GetFeedPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFeedPostsUseCase.swift; sourceTree = "<group>"; };
 		6941BB352D9730F800E39339 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		6941BB372D9731C000E39339 /* APIRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouterProtocol.swift; sourceTree = "<group>"; };
 		C902D1762A7ADA2B00BFA324 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		693810642D9DE2C2004BDF75 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				6938107A2D9F13D9004BDF75 /* UseCases */,
 				693810702D9EC096004BDF75 /* Protocols */,
 				693810652D9DE2CA004BDF75 /* Models */,
 			);
@@ -350,13 +353,17 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		6938107A2D9F13D9004BDF75 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				6938107B2D9F13F4004BDF75 /* GetFeedPostsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		6941BB322D9730B200E39339 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				C9F623E12AD8BA26008593C1 /* DirectMessages */,
-				C9AD69FD2A21A37300F727F2 /* Authentication */,
-				C9AD6A002A21A38F00F727F2 /* Root */,
-				C9AD6A022A21A3AD00F727F2 /* TabBar */,
 				693810662D9DE2D1004BDF75 /* Chat */,
 				693810642D9DE2C2004BDF75 /* User */,
 				693810622D9DE2A8004BDF75 /* Post */,
@@ -368,6 +375,10 @@
 		6941BB332D9730D200E39339 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				C9F623E12AD8BA26008593C1 /* DirectMessages */,
+				C9AD69FD2A21A37300F727F2 /* Authentication */,
+				C9AD6A002A21A38F00F727F2 /* Root */,
+				C9AD6A022A21A3AD00F727F2 /* TabBar */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -853,6 +864,7 @@
 				C9AD6A052A21A44F00F727F2 /* MainTabView.swift in Sources */,
 				C928547C2AE31BEA0088B904 /* BottomSheetNewChatView.swift in Sources */,
 				C92854772AE176710088B904 /* ListUsersView.swift in Sources */,
+				6938107C2D9F13F4004BDF75 /* GetFeedPostsUseCase.swift in Sources */,
 				C9619B6E2AC36A5B000A6E59 /* CircularProfileImageView.swift in Sources */,
 				C902D17F2A7AF7CF00BFA324 /* SearchViewModel.swift in Sources */,
 				693810722D9EC0AD004BDF75 /* UserRepositoryProtocol.swift in Sources */,

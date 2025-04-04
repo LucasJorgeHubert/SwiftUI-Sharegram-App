@@ -32,7 +32,6 @@ extension DataSource.Post {
         
         var path: String { return "posts" }
         
-        
         var object: ModelProtocol? { return nil }
         
     }

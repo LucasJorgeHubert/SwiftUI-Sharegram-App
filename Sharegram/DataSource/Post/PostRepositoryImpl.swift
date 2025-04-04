@@ -13,14 +13,10 @@ extension DataSource.Post {
     struct RepositoryImpl: PostRepositoryProtocol {
         let dispatcher: APIDispatcherProtocol
         
-        private let user: Domain.User.Model.User
-        
         init(
-            dispatcher: APIDispatcherProtocol = DataSource.APIDispatcher(),
-            user: Domain.User.Model.User
+            dispatcher: APIDispatcherProtocol = DataSource.APIDispatcher()
         ) {
             self.dispatcher = dispatcher
-            self.user = user
         }
         
         func fetchFeedPosts() async throws -> [Domain.Post.Model.Post]{

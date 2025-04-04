@@ -17,7 +17,7 @@ struct FeedCell: View {
             // MARK: - User image and username
             HStack {
                 if let user = post.user {
-                    CircularProfileImageView(user: user, size: .small)
+                    CircularProfileImageView(user: user, size: .icon)
                     
                     Text(user.username)
                         .font(.footnote)
@@ -44,7 +44,8 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "heart")
                         .imageScale(.large)
-                    
+                    Text("12")
+                        .font(.system(size: 14))
                 }
                 
                 Button {
@@ -52,7 +53,8 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "bubble.right")
                         .imageScale(.large)
-                    
+                    Text("12")
+                        .font(.system(size: 14))
                 }
                 
                 Button {
@@ -60,13 +62,16 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
+                    Text("12")
+                        .font(.system(size: 14))
                     
                 }
                 
                 Spacer()
 
             }
-            .padding()
+            .padding(.horizontal)
+            .padding(.vertical, 4)
             .foregroundColor(.purple)
             
             // MARK: - Like counter
@@ -80,7 +85,7 @@ struct FeedCell: View {
             // MARK: - Comments
             
             HStack {
-                Text("\(post.user?.username ?? "")").fontWeight(.semibold) + Text(post.caption)
+                Text("\(post.user?.username ?? "") ").fontWeight(.semibold) + Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)
@@ -94,13 +99,13 @@ struct FeedCell: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
                 .padding(.top, 1)
-                .foregroundColor(Color(.systemPurple).opacity(0.5))
+                .foregroundColor(Color(.systemPurple).opacity(0.8))
         }
     }
 }
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell(post: Domain.Post.Model.Post.MOCK_POSTS[0])
+        FeedCell(post: Domain.Post.Model.Post.MOCK_POSTS[2])
     }
 }
