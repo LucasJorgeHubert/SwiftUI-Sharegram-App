@@ -11,6 +11,7 @@ extension DataSource.Post {
     enum APIRouter: APIRouterProtocol {
         case getAllPosts
         case getPostByUser(userId: String)
+        case postLike(postId: String)
         
         var field: String? {
             switch self {

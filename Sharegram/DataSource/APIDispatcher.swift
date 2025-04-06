@@ -52,5 +52,14 @@ extension DataSource {
             try? await document.updateData(encoded)
         }
         
+        func updateObjectParameters(with params: [String: Any], apiRouter: APIRouterProtocol) async throws {
+            let collection = firestore.collection(apiRouter.path)
+            let document = collection.document(apiRouter.)
+            
+            
+            
+            guard let encoded = try? Firestore.Encoder().encode(apiRouter.object) else { return }
+            try? await document.updateData(encoded)
+        }
     }
 }

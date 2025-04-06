@@ -14,7 +14,11 @@ extension Domain.Post.Model {
         public var id: String
         let ownerUid: String
         let caption: String
-        var likes: Int
+        var likesCount: Int
+        var likesUids: [String]
+        var comentsCount: Int
+        var comentsUids: [String]
+        var shareCounts: Int
         let imageURL: String
         let timestamp: Timestamp
         var user: Domain.User.Model.User?
@@ -25,7 +29,11 @@ extension Domain.Post.Model {
                 id: UUID().uuidString,
                 ownerUid:  UUID().uuidString,
                 caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ullamcorper.",
-                likes: 8,
+                likesCount: 8,
+                likesUids: [],
+                comentsCount: 2,
+                comentsUids: [],
+                shareCounts: 4,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
                 user: Domain.User.Model.User.MOCK_USERS[0]
@@ -34,7 +42,11 @@ extension Domain.Post.Model {
                 id: UUID().uuidString,
                 ownerUid:  UUID().uuidString,
                 caption: "Maecenas condimentum eu dui vitae.",
-                likes: 3458,
+                likesCount: 8,
+                likesUids: [],
+                comentsCount: 2,
+                comentsUids: [],
+                shareCounts: 4,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
                 user: Domain.User.Model.User.MOCK_USERS[1]
@@ -43,7 +55,11 @@ extension Domain.Post.Model {
                 id: UUID().uuidString,
                 ownerUid:  UUID().uuidString,
                 caption: "In hac habitasse platea dictumst. Nullam id quam.",
-                likes: 245,
+                likesCount: 8,
+                likesUids: [],
+                comentsCount: 2,
+                comentsUids: [],
+                shareCounts: 4,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
                 user: Domain.User.Model.User.MOCK_USERS[2]
@@ -52,7 +68,11 @@ extension Domain.Post.Model {
                 id: UUID().uuidString,
                 ownerUid:  UUID().uuidString,
                 caption: "Maecenas placerat ante quis diam.",
-                likes: 45,
+                likesCount: 8,
+                likesUids: [],
+                comentsCount: 2,
+                comentsUids: [],
+                shareCounts: 4,
                 imageURL: "Post-\(postNumber.randomElement() ?? "")",
                 timestamp: Timestamp(),
                 user: Domain.User.Model.User.MOCK_USERS[0]

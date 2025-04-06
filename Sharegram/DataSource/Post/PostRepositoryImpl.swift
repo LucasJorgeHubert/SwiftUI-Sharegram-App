@@ -26,6 +26,10 @@ extension DataSource.Post {
         func fetchUserPosts(uid: String) async throws -> [Domain.Post.Model.Post] {
             return try await dispatcher.getListObjectWithParameter(apiRouter: DataSource.Post.APIRouter.getPostByUser(userId: uid))
         }
+        
+        func postPostLike(postId: String, uid: String) async throws {
+            try await dispatcher.updateObject(apiRouter: DataSource.Post.APIRouter.postLike(postId: postId, uid: uid))
+        }
     }
     
 }

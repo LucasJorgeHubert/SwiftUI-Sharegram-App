@@ -44,7 +44,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "heart")
                         .imageScale(.large)
-                    Text("12")
+                    Text(post.likesCount)
                         .font(.system(size: 14))
                 }
                 
@@ -53,7 +53,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "bubble.right")
                         .imageScale(.large)
-                    Text("12")
+                    Text(post.comentsCount)
                         .font(.system(size: 14))
                 }
                 
@@ -62,9 +62,8 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
-                    Text("12")
+                    Text(post.shareCounts)
                         .font(.system(size: 14))
-                    
                 }
                 
                 Spacer()
@@ -73,14 +72,6 @@ struct FeedCell: View {
             .padding(.horizontal)
             .padding(.vertical, 4)
             .foregroundColor(.purple)
-            
-            // MARK: - Like counter
-            
-            Text("\(post.likes) Likes")
-                .font(.footnote)
-                .fontWeight(.semibold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal)
             
             // MARK: - Comments
             
