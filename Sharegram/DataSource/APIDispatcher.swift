@@ -54,12 +54,23 @@ extension DataSource {
         
         func updateObjectParameters(with params: [String: Any], apiRouter: APIRouterProtocol) async throws {
             let collection = firestore.collection(apiRouter.path)
-            let document = collection.document(apiRouter.)
+            let document = collection.document(apiRouter.param)
             
-            
-            
-            guard let encoded = try? Firestore.Encoder().encode(apiRouter.object) else { return }
-            try? await document.updateData(encoded)
+            try params.forEach {
+                do {
+                    try document.updateData([$0.key: $0.value])
+                } catch {
+                    throw NetworkError.encodingParams("Error updating document: \(error) / param: \($0.key) - value: \($0.value)")
+                }
+            }
         }
     }
+}
+
+enum NetworkError: Error {
+    case badURL
+    case requestFailed(statusCode: Int)
+    case decodingFailed
+    case unknown(Error)
+    case encodingParams(String)
 }

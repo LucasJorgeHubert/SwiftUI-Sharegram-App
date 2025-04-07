@@ -28,6 +28,8 @@ extension DataSource.Post {
                 return ""
             case .getPostByUser(let userId):
                 return userId
+            case .postLike(let postId):
+                return postId
             }
         }
         
