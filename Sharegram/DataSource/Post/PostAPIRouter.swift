@@ -11,6 +11,7 @@ extension DataSource.Post {
     enum APIRouter: APIRouterProtocol {
         case getAllPosts
         case getPostByUser(userId: String)
+        case postLike(postId: String)
         
         var field: String? {
             switch self {
@@ -27,11 +28,12 @@ extension DataSource.Post {
                 return ""
             case .getPostByUser(let userId):
                 return userId
+            case .postLike(let postId):
+                return postId
             }
         }
         
         var path: String { return "posts" }
-        
         
         var object: ModelProtocol? { return nil }
         

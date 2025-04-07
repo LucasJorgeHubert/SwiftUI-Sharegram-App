@@ -11,7 +11,7 @@ class PostGridViewModel: ObservableObject {
     private let user: Domain.User.Model.User
     @Published var posts: [Domain.Post.Model.Post] = []
     
-    let postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl(user: Domain.User.Model.User.MOCK_USERS[0])
+    let postClient: PostRepositoryProtocol = DataSource.Post.RepositoryImpl()
     
     init(user: Domain.User.Model.User) {
         self.user = user
