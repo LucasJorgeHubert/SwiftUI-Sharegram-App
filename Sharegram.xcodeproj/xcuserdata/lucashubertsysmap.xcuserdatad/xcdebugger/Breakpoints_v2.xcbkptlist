@@ -156,9 +156,9 @@
             filePath = "Sharegram/Presenter/TabBar/Feed/FeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init(getFeedPostsUseCase:postLikeInPostsUseCase:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init(getFeedPostsUseCase:postLikeInPostsUseCase:deleteLikeInPostsUseCase:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -172,8 +172,8 @@
             filePath = "Sharegram/Presenter/TabBar/Feed/FeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "fetchPosts()"
             landmarkType = "7">
          </BreakpointContent>

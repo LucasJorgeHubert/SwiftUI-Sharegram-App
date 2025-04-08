@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Kingfisher
+import FirebaseAuth
 
 struct FeedCell: View {
     
@@ -15,6 +16,14 @@ struct FeedCell: View {
     @StateObject var viewModel: FeedViewModel
     
     @State var isLiked: Bool = false
+    
+    init(post: Domain.Post.Model.Post, viewModel: FeedViewModel) {
+        self.post = post
+        _viewModel = StateObject(wrappedValue: viewModel)
+        _isLiked = State(
+            initialValue:post.likesUids.contains(Auth.auth().currentUser?.uid ?? "")
+        )
+    }
     
     var body: some View {
         VStack {
@@ -46,12 +55,13 @@ struct FeedCell: View {
                 Button {
                     Task {
                         do {
-                            !isLiked {
+                            if !isLiked {
                                 try await viewModel.likePost(postId: post.id)
+                                isLiked = true
                             } else {
-                                
+                                try await viewModel.removeLikePost(postId: post.id)
+                                isLiked = false
                             }
-                            isLiked.toggle()
                         } catch {
                             print(error)
                         }
@@ -59,7 +69,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "heart\(isLiked ? ".fill" : "")")
                         .imageScale(.large)
-                    Text("\(post.likesCount)")
+                    Text("\(isLiked ? post.likesCount + 1 : post.likesCount)")
                         .font(.system(size: 14))
                 }
                 
