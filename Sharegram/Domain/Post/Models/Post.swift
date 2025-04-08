@@ -19,7 +19,7 @@ extension Domain.Post.Model {
         var comentsCount: Int
         var comentsUids: [String]
         var shareCount: Int
-        let imageURL: String
+        var imageURL: String
         let timestamp: Timestamp
         var user: Domain.User.Model.User?
         
