@@ -16,7 +16,19 @@ class UploadPostViewModel: ObservableObject {
         didSet { Task { await loadImage(fromItem: selectedImage) } }
     }
     @Published var postImage: Image?
+    @Published var caption = ""
     private var uiImage: UIImage?
+    
+    private var postNewPostUseCase: Domain.Post.UseCase.PostNewPost
+    private var postImagePostUseCase: Domain.Post.UseCase.PostImagePost
+    
+    init(
+        postNewPostUseCase: Domain.Post.UseCase.PostNewPost = Domain.Post.UseCase.PostNewPost(),
+        postImagePostUseCase: Domain.Post.UseCase.PostImagePost = Domain.Post.UseCase.PostImagePost()
+    ) {
+        self.postNewPostUseCase = postNewPostUseCase
+        self.postImagePostUseCase = postImagePostUseCase
+    }
     
     func loadImage(fromItem item: PhotosPickerItem?) async {
         guard let item = item else { return }
@@ -27,15 +39,23 @@ class UploadPostViewModel: ObservableObject {
         self.postImage = Image(uiImage: uiImage)
     }
     
-    func uploadPost(caption: String) async throws {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
+    func postPost() async throws {
         guard let uiImage = uiImage else { return }
+        let imageURL = try await postImagePostUseCase.execute(postImage: uiImage)
         
-        let postRef = Firestore.firestore().collection("posts").document()
-        guard let umageURL = try await DataSource.Post.ImageUploader.uploadImage(image: uiImage) else { return }
-        let post = Domain.Post.Model.Post(id: postRef.documentID, ownerUid: uid, caption: caption, likes: 0, imageURL: umageURL, timestamp: Timestamp())
-        guard let encodedPost = try? Firestore.Encoder().encode(post) else { return }
+        let post = Domain.Post.Model.Post(
+            id: "",
+            ownerUid: AuthService.shared.currentUser?.id ?? "",
+            caption: caption,
+            likesCount: 0,
+            likesUids: [],
+            comentsCount: 0,
+            comentsUids: [],
+            shareCount: 0,
+            imageURL: imageURL,
+            timestamp: Timestamp()
+        )
         
-        try await postRef.setData(encodedPost)
+        try await postNewPostUseCase.execute(post: post)
     }
 }

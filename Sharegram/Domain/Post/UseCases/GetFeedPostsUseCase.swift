@@ -1,10 +1,3 @@
-//
-//  GetFeedPostsUseCase.swift
-//  Sharegram
-//
-//  Created by Lucas Hubert on 03/04/25.
-//
-
 import Foundation
 
 extension Domain.Post.UseCase {
@@ -21,7 +14,7 @@ extension Domain.Post.UseCase {
         }
         
         public func execute() async throws -> [Domain.Post.Model.Post] {
-            var posts: [Domain.Post.Model.Post] = try await postRepository.fetchFeedPosts()
+            var posts: [Domain.Post.Model.Post] = try await postRepository.getFeedPosts()
             
             for i in 0 ..< posts.count {
                 let post = posts[i]

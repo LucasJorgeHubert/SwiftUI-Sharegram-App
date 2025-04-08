@@ -156,9 +156,9 @@
             filePath = "Sharegram/Presenter/TabBar/Feed/FeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "init(getFeedPostsUseCase:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "init(getFeedPostsUseCase:postLikeInPostsUseCase:deleteLikeInPostsUseCase:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -172,88 +172,10 @@
             filePath = "Sharegram/Presenter/TabBar/Feed/FeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "fetchPosts()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "96215DBD-74C9-4C00-8534-9995527CD165"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Sharegram/DataSource/Post/PostRepositoryImpl.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchFeedPosts()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "96215DBD-74C9-4C00-8534-9995527CD165 - 5808109ef4b43a6d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Sharegram.DataSource.Post.RepositoryImpl.fetchFeedPosts() async throws -&gt; Swift.Array&lt;Sharegram.Domain.Post.Model.Post&gt;"
-                  moduleName = "Sharegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/DataSource/Post/PostRepositoryImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "96215DBD-74C9-4C00-8534-9995527CD165 - 3c2c306a4d59868d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Sharegram.DataSource.Post.RepositoryImpl.fetchFeedPosts() async throws -&gt; Swift.Array&lt;Sharegram.Domain.Post.Model.Post&gt;"
-                  moduleName = "Sharegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/DataSource/Post/PostRepositoryImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "40">
-               </Location>
-               <Location
-                  uuid = "96215DBD-74C9-4C00-8534-9995527CD165 - a3affa7552dd7e13"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Sharegram.DataSource.Post.RepositoryImpl.fetchFeedPosts() async throws -&gt; Swift.Array&lt;Sharegram.Domain.Post.Model.Post&gt;"
-                  moduleName = "Sharegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/DataSource/Post/PostRepositoryImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "96215DBD-74C9-4C00-8534-9995527CD165 - 981d97677fee1c10"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Sharegram.DataSource.Post.RepositoryImpl.fetchFeedPosts() async throws -&gt; Swift.Array&lt;Sharegram.Domain.Post.Model.Post&gt;"
-                  moduleName = "Sharegram"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucashubertsysmap/Development/Portfolio/SwiftUI-Sharegram-App/Sharegram/DataSource/Post/PostRepositoryImpl.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
