@@ -12,6 +12,10 @@ struct FeedCell: View {
     
     let post: Domain.Post.Model.Post
     
+    @StateObject var viewModel: FeedViewModel
+    
+    @State var isLiked: Bool = false
+    
     var body: some View {
         VStack {
             // MARK: - User image and username
@@ -40,11 +44,22 @@ struct FeedCell: View {
             
             HStack(spacing: 16) {
                 Button {
-                    print("Like")
+                    Task {
+                        do {
+                            !isLiked {
+                                try await viewModel.likePost(postId: post.id)
+                            } else {
+                                
+                            }
+                            isLiked.toggle()
+                        } catch {
+                            print(error)
+                        }
+                    }
                 } label: {
-                    Image(systemName: "heart")
+                    Image(systemName: "heart\(isLiked ? ".fill" : "")")
                         .imageScale(.large)
-                    Text(post.likesCount)
+                    Text("\(post.likesCount)")
                         .font(.system(size: 14))
                 }
                 
@@ -53,7 +68,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "bubble.right")
                         .imageScale(.large)
-                    Text(post.comentsCount)
+                    Text("\(post.comentsCount)")
                         .font(.system(size: 14))
                 }
                 
@@ -62,7 +77,7 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "paperplane")
                         .imageScale(.large)
-                    Text(post.shareCounts)
+                    Text("\(post.shareCount)")
                         .font(.system(size: 14))
                 }
                 
@@ -97,6 +112,9 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell(post: Domain.Post.Model.Post.MOCK_POSTS[2])
+        FeedCell(
+            post: Domain.Post.Model.Post.MOCK_POSTS[2],
+            viewModel: FeedViewModel()
+        )
     }
 }

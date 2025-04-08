@@ -10,25 +10,42 @@ import Foundation
 
 extension DataSource.Post {
     
-    struct RepositoryImpl: PostRepositoryProtocol {
-        let dispatcher: APIDispatcherProtocol
+    public class RepositoryImpl: PostRepositoryProtocol {
         
-        init(
-            dispatcher: APIDispatcherProtocol = DataSource.APIDispatcher()
-        ) {
-            self.dispatcher = dispatcher
+        let firestore: Firestore
+        let collection: CollectionReference
+        
+        init() {
+            self.firestore = Firestore.firestore()
+            self.collection = firestore.collection("posts")
         }
         
-        func fetchFeedPosts() async throws -> [Domain.Post.Model.Post]{
-            return try await dispatcher.getListObject(apiRouter: DataSource.Post.APIRouter.getAllPosts)
+        func getFeedPosts() async throws -> [Domain.Post.Model.Post]{
+            let docs = try await collection.getDocuments()
+            return docs.documents.compactMap { try? $0.data(as: Domain.Post.Model.Post.self) }
         }
         
-        func fetchUserPosts(uid: String) async throws -> [Domain.Post.Model.Post] {
-            return try await dispatcher.getListObjectWithParameter(apiRouter: DataSource.Post.APIRouter.getPostByUser(userId: uid))
+        func getUserPosts(uid: String) async throws -> [Domain.Post.Model.Post] {
+            let docs = try await collection.whereField("ownerUid", isEqualTo: uid).getDocuments()
+            return docs.documents.compactMap { try? $0.data(as: Domain.Post.Model.Post.self) }
         }
         
         func postPostLike(postId: String, uid: String) async throws {
-            try await dispatcher.updateObject(apiRouter: DataSource.Post.APIRouter.postLike(postId: postId, uid: uid))
+            let doc = try await collection.document(postId)
+            try await doc.updateData(
+                [
+                    "likesCount": FieldValue.increment(Int64(1)),
+                    "likesUids": FieldValue.arrayUnion([uid])
+                ])
+        }
+        
+        func deletePostLike(postId: String, uid: String) async throws {
+            let doc = try await collection.document(postId)
+            try await doc.updateData(
+                [
+                    "likesCount": FieldValue.increment(Int64(-1)),
+                    "likesUids": FieldValue.arrayRemove([uid])
+                ])
         }
     }
     
